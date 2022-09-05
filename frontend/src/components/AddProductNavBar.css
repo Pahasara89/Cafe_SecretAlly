@@ -1,0 +1,55 @@
+.nav{
+    font-size: 30px;
+    
+    
+    
+  }
+  
+  a {
+    
+    transition: .5s;
+    text-align: center;
+    margin-left:5px;
+    margin-right:5px;
+    
+    
+  }
+  
+  .color {
+    background-color:grey;
+  }
+  
+  .active {
+    background-color:black;
+  }
+  
+  .anime:hover {
+    background-color:black;
+  }
+
+  .form{
+    margin-left:25%;
+    margin-right:25%;
+    
+    
+  }
+  
+  .form-label{
+    color:black;
+    font-weight: bold;
+  }
+  
+  .textcolor {
+    color:black;
+    font-weight: bold;
+  }
+ 
+  
+  .Addbtn{
+    margin-bottom: 5px;
+    margin-left: 15px;
+    background-color:cornflowerblue;
+    color: white;
+    
+    
+  }  
