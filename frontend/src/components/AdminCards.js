@@ -11,13 +11,13 @@ function AdminCards() {
         <div className='cards__wrapper'>
             <ul className='cards__items'>
                 <CardItem
-                    src="images/product.jpg"
+                    src="images/growth-analytics.png"
                     text="Manage Products Details"
                     label="Product Management"
                     path="/add"
                 />
                 <CardItem
-                    src="images/delivery.jpg"
+                    src="images/delivery.gif"
                     text="Manage All The Deliveries"
                     label="Delivery Management"
                     path="/add-delivery"
@@ -29,15 +29,22 @@ function AdminCards() {
             <ul className='cards__items'>
 
                 <CardItem
-                    src="images/user.jpg"
+                    src="images/user.gif"
                     text="Details of Users"
                     label="User Management"
                     path="/userManagement"
                 />
 
                
-                
-                
+
+                <CardItem
+                    src="images/payment.gif"
+                    text="Details of Users"
+                    label="User Management"
+                    path="/userManagement"
+                />
+
+              
             </ul>
             
         </div>

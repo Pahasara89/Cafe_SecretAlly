@@ -55,7 +55,7 @@
 	height: 40px;
 	background-color: rgb(175, 173, 173);
 	margin: 1px 0;
-	border-radius: 55px;
+	border-radius: 10px;
 	display: grid;
 	grid-template-columns: 15% 85%;
 	padding: 0 0.100rem;

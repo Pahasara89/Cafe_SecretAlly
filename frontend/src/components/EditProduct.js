@@ -40,8 +40,8 @@ const EditProduct = ({editFormData, handleEditFormChange, handleCancelClick}) =>
                 
             </td>
             <td>
-                <button type="submit">Save</button>
-                <button type="button" onClick={handleCancelClick}>Cancel</button>
+                <button type="submit" className="btn btn-outline-success">Save</button>
+                <button type="button" onClick={handleCancelClick} className="btn btn-outline-danger">Cancel</button>
             </td>
         </tr>
     )

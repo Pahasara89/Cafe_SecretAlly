@@ -42,8 +42,8 @@ const ViewProductTable = ({product , handleEditClick, handleDeleteClick}) => {
                   })()}
                 </td>
                 <td>
-                    <button type="button" onClick={(e) => handleEditClick(e,product)}>Edit</button>
-                    <button type="button" onClick={() => handleDeleteClick(product._id)}>Delete</button>
+                    <button type="button" onClick={(e) => handleEditClick(e,product)}className="btn btn-outline-success">Edit</button>
+                    <button type="button" onClick={() => handleDeleteClick(product._id)}className="btn btn-outline-danger">Delete</button>
                 </td>
             </tr>
             

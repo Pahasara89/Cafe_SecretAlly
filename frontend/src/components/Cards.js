@@ -11,13 +11,13 @@ function Cards() {
             <ul className='cards__items'>
                 <CardItem
                     src="images/Pizza.webp"
-                    text="Enjoy you meal with Ceylon Spices"
+                    text="Feed Your Soul With Pizza "
                     label="Pizza"
                     path="/pizza"
                 />
                 <CardItem
                     src="images/burgers.jpg"
-                    text="Dress Like a Gentlemen"
+                    text="You like burgers? Then you’ll love ours"
                     label="Burgers"
                     path="/burgers"
                 />
@@ -25,13 +25,13 @@ function Cards() {
             <ul className='cards__items'>
                 <CardItem
                     src="images/shawarma.jpg"
-                    text="Wear Like a Queen"
+                    text="There’s something in our shawarma that makes everyone want more"
                     label="Shawarma"
                     path="/shawarma"
                 />
                 <CardItem
                     src="images/Hotdogs.jpg"
-                    text="Products made by Coconut"
+                    text="Hot and fresh, just the way you like it"
                     label="Hot Dogs "
                     path="/hotdogs"
                 />

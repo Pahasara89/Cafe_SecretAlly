@@ -40,6 +40,11 @@ function AdminNavBar () {
     return(
         <Navbar bg="dark" expand="lg" variant="dark">
         <Container>
+
+        <div id='hdLogo'> 
+                <img alt="Logo"  src={require("../images/Cafe.png")} width="90"  height="55" className="d-inline-block align-top" /> 
+            </div>
+            
           <Navbar.Brand>
           <Link to='/admin-home' className='homenavbar-logo'>
                   Cafe SecretAlly

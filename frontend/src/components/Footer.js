@@ -42,6 +42,11 @@ function Footer() {
       
       <section class='social-media'>
         <div class='social-media-wrap'>
+
+        <div id='hdLogo'> 
+                <img alt="Logo"  src={require("../images/Cafe.png")} width="110"  height="100" className="d-inline-block align-top" /> 
+            </div>
+            
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
             Cafe SecretAlly
