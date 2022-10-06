@@ -7,6 +7,7 @@ import './HomeNavBar.css'
 import AdminNavBar from "./AdminNavBar";
 
 
+
 export default function AddProduct() {
 
 
@@ -111,6 +112,7 @@ export default function AddProduct() {
                     <br />
 
                     <button type="submit" className="btn Addbtn">Add Product</button>
+                    <buttons type="clear" className="btn Addbtn1">Clear</buttons>
                     <br />
 
                 </form>

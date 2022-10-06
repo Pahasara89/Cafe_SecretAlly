@@ -10,18 +10,12 @@ const ViewProductTable = ({product , handleEditClick, handleDeleteClick}) => {
                 <td className='td'>{product.category}</td>
                 <td className='td'>{product.date}</td>
                 <td className='td'>{product.size}</td>
-                <td className='td'>{product.price.toLocaleString(
-            'en-US',
-            {
-                style: 'currency',
-                currency: 'USD',
-            }
-        )}</td>
+                <td className='td'>{product.price}</td>
                 <td className='td'>{product.quantity}{product.unit}</td>
                 <td>
                     {(() => {
 
-                        if (product.quantity <= 10) {
+                        if (product.quantity <= 25) {
 
                         return (
 

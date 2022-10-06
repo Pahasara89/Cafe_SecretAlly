@@ -6,9 +6,7 @@ import {AiOutlineDingding} from 'react-icons/ai';
 import {useSelector,useDispatch} from 'react-redux';
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
-import { logout } from "../actions/userAction";
 import {
-    Container,
     Form,
     FormControl,
     Nav,
@@ -19,27 +17,11 @@ import {
 
 function AdminNavBar () {
 
-    const[click,setClick] = useState(false);
-
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
-    const { cart } = useSelector(state => state.cart);
-
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
-    const dispatch = useDispatch();
-
-    const logoutHandler = () => {
-        dispatch(logout());
-      
-      };
-    
-    useEffect(() => {}, [userInfo]);
   
 
     return(
         <Navbar bg="dark" expand="lg" variant="dark">
-        <Container>
+      
 
         <div id='hdLogo'> 
                 <img alt="Logo"  src={require("../images/Cafe.png")} width="90"  height="55" className="d-inline-block align-top" /> 
@@ -60,36 +42,6 @@ function AdminNavBar () {
             </Form>
           </Nav>
   
-            {userInfo ? (
-              <>
-                <Nav>
-                  
-  
-                  <Nav.Link href="/customer-home">
-                         Customer Home     
-                </Nav.Link>
-
-  
-                  <NavDropdown title={userInfo?.name} id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/profile" style={{color:'black'}}>
-                      <img
-                        alt=""
-                        src={`${userInfo.pic}`}
-                        width="25"
-                        height="25"
-                        style={{ marginRight: 10 }}
-                      />
-                      MyProfile
-                    </NavDropdown.Item>
-  
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item onClick={logoutHandler} style={{color:'black'}}>
-                      Logout
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Nav>
-              </>
-            ) : (
               <Nav>
                 {" "}
                 <Nav.Link>
@@ -103,9 +55,9 @@ function AdminNavBar () {
               
             
              
-            )}
+            
           </Navbar.Collapse>
-        </Container>
+        
       </Navbar>
     );
 }

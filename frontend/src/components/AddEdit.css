@@ -85,9 +85,9 @@
 	outline: none;
 	border: none;
 	cursor: pointer;
-	width: 90%;
+	width: 30%;
 	height: 40px;
-	border-radius: 30px;
+	border-radius: 10px;
 	font-size: 18px;
 	font-weight: 700;
 	font-family: "Lato", sans-serif;
@@ -96,6 +96,7 @@
 	background-color: #779598;
 	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
 	transition: all 0.5s;
+	margin-left: 110px;
 }
 
 .containers button:hover {
@@ -104,4 +105,30 @@
 
 .containers button:active {
 	background-color: #88ef9e;
+}
+
+.containers buttons {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	text-align: center;
+	background-color: #779598;
+	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+	transition: all 0.5s;
+	margin-left: 50px;
+}
+
+.containers buttons:hover {
+	background-color: #e01212;
+}
+
+.containers buttons:active {
+	background-color: #e31313;
 }

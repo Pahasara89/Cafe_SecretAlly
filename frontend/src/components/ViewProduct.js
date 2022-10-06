@@ -9,6 +9,7 @@ import {FiPrinter} from 'react-icons/fi';
 import { useReactToPrint } from "react-to-print";
 import './HomeNavBar.css'
 import AdminNavBar from "./AdminNavBar";
+import swal from "sweetalert2";
 
 
 
@@ -79,11 +80,23 @@ export default function ViewProducts(){
         }
 
         axios.put("http://localhost:5000/product/update/:ID",updateProduct).then(() =>{
-            alert("Product updated")
-            window.location.reload();
+            swal.fire({
+                title: "Success!",
+                text: "Updated Successfully",
+                icon: "success",
+                showConfirmButton: false,
+            });
         }).catch((err) =>{
-            alert(err)
+            swal.fire({
+                title: "Error!",
+                text: "Couldn't Update your Details",
+                icon: "error",
+            });
         })
+
+        setTimeout(()=>{
+            window.location.reload();
+        },1500)
 
 
     }
@@ -122,7 +135,6 @@ export default function ViewProducts(){
 
     }
 
-       
 
     return(
         <div>
