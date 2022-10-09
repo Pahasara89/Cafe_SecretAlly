@@ -41,7 +41,7 @@ function AdminCards() {
                     src="images/payment.gif"
                     text="Details of Payment"
                     label="User Management"
-                    path="/userManagement"
+                    path="/view_Payment"
                 />
 
               

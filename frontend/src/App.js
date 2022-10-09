@@ -13,7 +13,8 @@ import AdminHome from './components/AdminHome';
 
 import ContactUs from './components/ContactUs';
 
-
+import AddPaymentDetails from './components/AddPaymentDetails';
+import ViewPaymentDetails from './components/ViewPaymentDetails';
 
 
 
@@ -42,6 +43,8 @@ import ContactUs from './components/ContactUs';
             <Route path="/contact" element={<ContactUs/>}/>
             
 
+            <Route path="/add_Payment" element={<AddPaymentDetails/>} />
+            <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
             
             
 

@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const Payment_DetailsSchema = new Schema({
 
-    ID : {
+    ID: {
         type : String,
     },
     Pay_ID: {
@@ -13,7 +13,7 @@ const Payment_DetailsSchema = new Schema({
     },
 
 
-    BanK_Oner_Name : {
+    BanK_Owner_Name : {
         type : String,
         required : true,
     },
