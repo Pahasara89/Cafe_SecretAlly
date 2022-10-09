@@ -63,7 +63,7 @@ router.post('/add', upload, async(req,res)=>{
 
     newProduct.save().then(()=>{
         alert('Product added successfully');
-        res.redirect('http://localhost:3000/add');
+        res.redirect('http://localhost:3000/view');
 
     }).catch((err)=>{
         alert('Product already exists');
