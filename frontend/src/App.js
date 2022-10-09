@@ -9,6 +9,7 @@ import Burgers from './components/Burgers';
 import Pizza from './components/Pizza';
 import Shawarma from './components/Shawarma';
 import HotDogs from './components/HotDogs';
+import Cart from './components/Cart';
 import AdminHome from './components/AdminHome';
 
 import ContactUs from './components/ContactUs';
@@ -37,6 +38,7 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
             <Route path="/pizza" element={<Pizza/>} />
             <Route path="/shawarna" element={<Shawarma/>} />
             <Route path="/hotdogs" element={<HotDogs/>} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/add" element={<AddProduct/>} />
 
           
