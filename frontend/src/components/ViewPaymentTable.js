@@ -20,6 +20,7 @@ const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDelet
             
                 <td>
                     <button type="button" onClick={(e) => handleEditClick(e,Payment_Details)}className="btn btn-outline-success">Edit</button>
+                    <button type="button" className="btn btn-outline-warning">View</button>
                     <button type="button" onClick={() => handleDeleteClick(Payment_Details._id)}className="btn btn-outline-danger">Delete</button>
                 </td>
             </tr>
