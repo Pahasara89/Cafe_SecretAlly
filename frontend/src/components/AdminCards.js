@@ -40,7 +40,7 @@ function AdminCards() {
                 <CardItem
                     src="images/payment.gif"
                     text="Details of Payment"
-                    label="User Management"
+                    label="Payment Management"
                     path="/view_Payment"
                 />
 
