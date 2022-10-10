@@ -13,6 +13,7 @@ import Cart from './components/Cart';
 import AdminHome from './components/AdminHome';
 
 import ContactUs from './components/ContactUs';
+import Feedback from './components/Feedback';
 
 import AddPaymentDetails from './components/AddPaymentDetails';
 import ViewPaymentDetails from './components/ViewPaymentDetails';
@@ -43,6 +44,7 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
 
           
             <Route path="/contact" element={<ContactUs/>}/>
+            <Route path="/feedback" element={<Feedback/>}/>
             
 
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />

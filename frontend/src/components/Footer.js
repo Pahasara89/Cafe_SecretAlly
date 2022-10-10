@@ -5,6 +5,9 @@ import {FaInstagram} from 'react-icons/fa';
 import {FaYoutube} from 'react-icons/fa';
 import {FaTwitter} from 'react-icons/fa';
 import './Footer.css';
+import {
+  Nav
+} from "react-bootstrap";
 
 function Footer() {
   return (
@@ -28,7 +31,11 @@ function Footer() {
             <Link to='/'>Terms of Service</Link>
           </div>
           
-          <button  className="feedback_btn"> Give Us Feedbacks </button>
+          <Nav.Link>
+                <Link to='/feedback' className='homenav-links'>
+                         Give us Feedbacks
+                      </Link>
+                </Nav.Link>
 
           <div class='footer-link-items'>
             <h2>Contact</h2>
