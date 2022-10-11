@@ -7,11 +7,11 @@
 
 
 
-.body1 {
+.body2 {
 	font-family: sans-serif;
-	background-image: url('../images/pexels-pixabay-70842.jpg');
+	background-image: url('../images/Payment-Security.jpg');
 	background-repeat: no-repeat;
-	height: 1800px;
+	height: 1050px;
 	overflow: hidden;
 	background-size: cover;
 }
@@ -68,22 +68,29 @@
 	font-weight: 350;
 	color: white
 }
+.containers2 .p_tag{
+	color:white;
+	width: 300px;
+	height: 400px;
+}
 
 
 .containers1 input {
 	max-width: 300px;
 	width: 600px;
 	height: 40px;
-	background-color: rgb(175, 173, 173);
+	background-color: rgba(8, 8, 8, 0.7);
 	margin: 1px 0;
-	border-radius: 10px;
-	display: grid;
+	border-radius: 0px 20px 0px 20px;
 	grid-template-columns: 15% 85%;
 	padding: 0 0.100rem;
 	position: relative;
 	line-height: 1;
 	font-weight: 600;
 	margin-bottom: 18px;
+	border: #fff;
+	color: white;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px rgb(55, 6, 248);
 
 }
 
@@ -101,23 +108,40 @@
 	border-radius: 25px;
 	box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
 }
+.containers1 .ViweMore3 {
+    font-weight: 250;
+    margin-top: 15px;
+    margin-left: 5px;
+	margin-bottom: 4px;
+    color: rgb(170, 200, 200);
+    text-align: left;
+    font-size: 12px;
+}
+.containers1 .ViweMore4 {
+    font-weight: 250;
+    margin-top: -2px;
+	margin-bottom: 4px;
+    margin-left: 5px;
+    color: rgb(170, 200, 200);
+    text-align: left;
+    font-size: 12px;
+}
+.containers1 .form-Date{
+	
+}
 
 .containers1 button {
-	outline: none;
 	border: none;
-	cursor: pointer;
 	width: 30%;
 	height: 40px;
-	border-radius: 30px;
+	border-radius: 0px 20px 0px 20px;
 	font-size: 18px;
-	font-weight: 700;
+	font-weight: 700; 
 	font-family: "Lato", sans-serif;
 	color: #fff;
 	text-align: center;
-	justify-content: left;
-	background-color: #779598;
-	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
-	transition: all 0.5s;
+	background-color: rgba(8, 8, 8, 0.7);
+	box-shadow: 3px 3px 8px #10B48E, -3px -3px 8px #10B48E;
 }
 
 .containers1 button:hover {

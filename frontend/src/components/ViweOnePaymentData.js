@@ -171,7 +171,7 @@ const ViweOnePaymentData = () => {
                     <tr>
                     <td>
                     <div className="col-md-5 element">
-                    <p className="ViweMore2">State</p>
+                        <p className="ViweMore2">State</p>
                         <p  className="ViweMore" >{PaymentData.State}</p>
                     </div>
                     </td>

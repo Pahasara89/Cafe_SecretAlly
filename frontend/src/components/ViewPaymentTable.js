@@ -7,8 +7,6 @@ const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDelet
     
     const handleviweClick = (id) =>{
 
-        // axios.get("http://localhost:3000/pet-service/get-service/")
-
         window.location.href=`view_Payment_Details/${id}`
 
     }

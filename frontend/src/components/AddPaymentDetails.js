@@ -11,12 +11,13 @@ import HomeNavBar from "./HomeNavBar";
 
 
 export default function AddProduct() {
+    
 
 
     return (
     
       <>
-        <div className="body">
+        <div className="body2">
             <HomeNavBar/>
  
 
@@ -37,7 +38,7 @@ export default function AddProduct() {
 
                     <div className="col-md-3 element" style={{ display: 'block' }}>
                           <label for="datePicker" className="form-label1">Date</label>
-                          <input id="date" name="Pay_date" label="Choose Received Date" type="Date" InputLabelProps={{ shrink: true, }} required/>
+                          <input id="date" name="Pay_date" label="Choose Received Date"  type="Date" InputLabelProps={{ shrink: true, }} required/>
     
                     </div>
 
@@ -49,24 +50,26 @@ export default function AddProduct() {
                     <br/>
                     <div className="col-md-5 element">
                         <label for="inputQuant" className="form-label1">PAYMENT DETAILS</label>
+                        <p className="ViweMore3">Bank Name</p>
                         <input name="BanKName" type="text" className="form-control" id="inputQuant" placeholder="Enter Bank Name" required/>
                     </div>
                     <tr >
                     <td>
                     
                     <div className="col-md-5 element">
-                        
+                        <p className="ViweMore4">Card No</p>
                         <input name="Card_No" type="Number" className="form-control" id="inputQuant1" placeholder="Enter Card Number"required/>
                     </div>
                     </td>
                     <td>
                     <div className="col-md-5 element">
+                        <p className="ViweMore4">Expiry</p>
                         <input name="Expiry" type="text" className="form-control" id="inputQuant2" placeholder="01/25"required/>
                     </div>
                     </td>
                     <td>
                     <div className="col-md-5 element">
-                        
+                        <p className="ViweMore4">Cvv</p>
                         <input name="Cvv" type="text" className="form-control" id="inputQuant3" placeholder="Cvv"required/>
                     </div>
                     </td>
@@ -77,12 +80,14 @@ export default function AddProduct() {
                     <td>
                     <div className="col-md-5 element">
                         <label for="inputQuant4" className="form-label1">BILLING ADDRESS</label>
+                        <p className="ViweMore3">Strees Address</p>
                         <input name="Strees_Address" type="text" className="form-control" id="inputQuant4" placeholder="Enter Strees Address"required/>
                     </div>
                     </td>
                     <td>
                     <div className="col-md-5 element">
                         <label for="inputQuant5" className="form-label1"></label>
+                        <p className="ViweMore3">City</p>
                         <input name="City" type="text" className="form-control" id="inputQuant5" placeholder="Enter City"required/>
                     </div>
                     </td>
@@ -90,14 +95,14 @@ export default function AddProduct() {
                     <tr>
                     <td>
                     <div className="col-md-5 element">
-                        
+                        <p className="ViweMore4">State</p>
                         <input name="State" type="text" className="form-control" id="inputQuant6" placeholder="Enter State"required/>
                     </div>
                     </td>
                     <td>
                     
                     <div className="col-md-5 element">
-                    
+                        <p className="ViweMore4">Zip Code</p>
                         <input name="Zip_Code" type="number" className="form-control" id="inputQuant7" placeholder="Enter Zip Code"required/>
                     </div>
                     </td>
@@ -115,7 +120,7 @@ export default function AddProduct() {
                         <input name="Totle_price" type="number" className="form-control" id="inputQuant9" placeholder="5000"
                         />
 
-                        <p> Enjoy all the features and perk after you complete the payment</p>
+                        <p className="p_tag"> Enjoy all the features and perk after you complete the payment</p>
                     </div>
 
                     <br />
@@ -126,7 +131,7 @@ export default function AddProduct() {
                    <br />
                    <br />
 
-                    <button type="submit" className="btn Addbtn">Add Payment Details</button>
+                   <button type="submit" className="btn Addbtn">Add Payment Details</button>
                     <br />
 
                 </form>
