@@ -9,6 +9,7 @@ import {FiPrinter} from 'react-icons/fi';
 import { useReactToPrint } from "react-to-print";
 import './HomeNavBar.css'
 import AdminNavBar from "./AdminNavBar";
+import './ViweMorePayment.css'
 
 
 
@@ -155,7 +156,27 @@ export default function ViewPaymentDetails(){
 
     }
 
-       
+     /*----------------------------------------------------------------------------------------------------------------*/
+     const [PaymentData,setPaymentData] = useState([]); 
+
+    const handleviweClick = (id) =>{
+        // axios.get("http://localhost:3000/pet-service/get-service/") 
+        window.location.href=`view_Payment_Details/${id}`
+    }
+
+    const getPaymentData = () => {
+        axios.get('http://localhost:3000/Payment_Details/view_Payment')
+            .then(res => {
+                const allPaymentData = res.data.result;
+                setPaymentData(allPaymentData)       
+            })
+    }
+
+
+    useEffect(()=>{
+        getPaymentData()
+    },[]);
+     /*-----------------------------------------------------------------------------------------------------------------*/
 
     return(
         <div>
@@ -199,10 +220,19 @@ export default function ViewPaymentDetails(){
                                         handleEditFormChange={handleEditFormChange}
                                         handleCancelClick={handleCancelClick}
                                     />
-                                 ) : (
+                                 ) :
+                                /* (
+                                    <PaymentData 
+                                        editFormData={editFormData} 
+                                        handleviweClick={handleviweClick}
+                                        handleCancelClick={handleCancelClick}
+                                    />
+                                 ) :*/
+                                  (
                                     <ViewPaymentTable 
                                         Payment_Details={Payment_Details}
                                         handleEditClick={handleEditClick}
+                                        handleViweClick={handleviweClick}
                                         handleDeleteClick={handleDeleteClick}
                                     />
                                  )}

@@ -91,6 +91,18 @@ router.route("/view_Payment").get((req,res)=>{
     })
 })
 
+router.get("/view_Payment/:id" , async(req,res)=>{
+    const onePayment_Details = Payment_Details.findOne({_id:req.params.id} , function(err , result){
+        if(err){
+            res.json({"err":err})
+        }else{
+            res.json({"result":result})
+        }
+    })
+
+
+})
+
 
 
 router.route("/update_Payment_Details/:ID").put(async(req,res)=>{

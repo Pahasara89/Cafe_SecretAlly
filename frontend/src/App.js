@@ -16,6 +16,7 @@ import ContactUs from './components/ContactUs';
 
 import AddPaymentDetails from './components/AddPaymentDetails';
 import ViewPaymentDetails from './components/ViewPaymentDetails';
+import ViewOnePaymentDetails from './components/ViweOnePaymentData';
 
 
 
@@ -47,6 +48,7 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
 
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />
             <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
+            <Route path="/view_Payment_Details/:id" element={<ViewOnePaymentDetails/>} />
             
             
 

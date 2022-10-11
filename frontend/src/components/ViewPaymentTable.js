@@ -1,7 +1,19 @@
 import React from 'react';
 import './DownloadInvoice.css'
 
-const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDeleteClick}) => {
+
+
+const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDeleteClick }) => {
+    
+    const handleviweClick = (id) =>{
+
+        // axios.get("http://localhost:3000/pet-service/get-service/")
+
+        window.location.href=`view_Payment_Details/${id}`
+
+    }
+    
+    
     return(
         <>
             <tr>
@@ -12,7 +24,7 @@ const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDelet
                 <td className='td'>{Payment_Details.Totle_price}</td>
 
                 
-                <td className='td'>{Payment_Details.Pay_date}</td>
+                <td className='td'>{Payment_Details.Pay_date.substring(0,10)}</td>
 
                 
 
@@ -20,7 +32,7 @@ const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDelet
             
                 <td>
                     <button type="button" onClick={(e) => handleEditClick(e,Payment_Details)}className="btn btn-outline-success">Edit</button>
-                    <button type="button" className="btn btn-outline-warning">View</button>
+                    <button type="button" onClick={()=>{handleviweClick(Payment_Details._id)}} className="btn btn-outline-warning">View</button>
                     <button type="button" onClick={() => handleDeleteClick(Payment_Details._id)}className="btn btn-outline-danger">Delete</button>
                 </td>
             </tr>
