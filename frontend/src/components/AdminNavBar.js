@@ -45,6 +45,12 @@ function AdminNavBar () {
               <Nav>
                 {" "}
                 <Nav.Link>
+                <Link to='/' className='homenav-links'>
+                         Feedbacks
+                      </Link>
+                </Nav.Link>
+
+                <Nav.Link>
                 <Link to='/customer-home' className='homenav-links'>
                          Customer Home
                       </Link>

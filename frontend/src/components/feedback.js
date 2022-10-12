@@ -1,6 +1,7 @@
 import { useState } from "react";
-import './ContactUs.css';
-import { FaStar } from "react-icons/fa";
+import './Feedback.css';
+import { FaBlackTie, FaStar } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 const colors = {
     orange: "#FFBA5A",
@@ -29,6 +30,7 @@ function Feedback() {
     
     
       return (
+        <div className="bodys">
         <div style={styles.container}>
           <h2> How satisfied are u with our customer support performance? </h2>
           <div style={styles.stars}>
@@ -54,8 +56,8 @@ function Feedback() {
             style={styles.textarea}
           />
     
-        <button type="submit" className="btn Addbtn">Submit</button>
-          
+    <button  className="submit_btn"> Submit </button>
+        </div>
         </div>
       );
     };
@@ -66,6 +68,7 @@ function Feedback() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        
       },
       stars: {
         display: "flex",
@@ -77,7 +80,7 @@ function Feedback() {
         padding: 10,
         margin: "20px 0",
         minHeight: 100,
-        width: 300
+        width: 300,
       },
       button: {
         border: "1px solid #a9a9a9",

@@ -2,13 +2,15 @@ import React from 'react';
 import {Card, Col} from 'react-bootstrap';
 import '../App.css';
 
+
 const ViewHotDogs = ({product,userInfo}) => {
     const cat = product.category;
 
 
+
     return(
         <>
-            {cat === "HotDogs" &&
+            {cat === "Hot dogs" &&
                 <Col md={6} lg={4} sm={12}>
                     <Card className="shadow-lg m-4 rounded card" >
 
@@ -23,7 +25,6 @@ const ViewHotDogs = ({product,userInfo}) => {
                                 type='button' 
                                 className='btn btn-warning btn-sm'
                                 disabled={product.quantity <= 0}
-                              
                                 >
                                     Add to Cart
                             </button>

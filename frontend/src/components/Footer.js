@@ -31,11 +31,8 @@ function Footer() {
             <Link to='/'>Terms of Service</Link>
           </div>
           
-          <Nav.Link>
-                <Link to='/feedback' className='homenav-links'>
-                         Give us Feedbacks
-                      </Link>
-                </Nav.Link>
+
+                <Link to = '/feedback'><button  className="feedback_btn"> Give Us Feedbacks </button></Link>
 
           <div class='footer-link-items'>
             <h2>Contact</h2>

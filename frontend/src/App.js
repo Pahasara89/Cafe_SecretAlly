@@ -17,6 +17,7 @@ import Feedback from './components/Feedback';
 
 import AddPaymentDetails from './components/AddPaymentDetails';
 import ViewPaymentDetails from './components/ViewPaymentDetails';
+import PrintReport from './components/PrintReport';
 
 
 
@@ -37,10 +38,11 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
             <Route path="/view" element={<ViewProduct/>} />
             <Route path="/burgers" element={<Burgers/>} />
             <Route path="/pizza" element={<Pizza/>} />
-            <Route path="/shawarna" element={<Shawarma/>} />
+            <Route path="/shawarma" element={<Shawarma/>} />
             <Route path="/hotdogs" element={<HotDogs/>} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/add" element={<AddProduct/>} />
+            <Route path="printreport" element={<PrintReport/>}/>
 
           
             <Route path="/contact" element={<ContactUs/>}/>

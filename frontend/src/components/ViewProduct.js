@@ -142,8 +142,10 @@ export default function ViewProducts(){
             <ViewProductNavBar/>
             
             
-            <div className='search-container'>
-                <input type="text" className="search" placeholder="Search Products..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
+            <div id="repGSearch" className='col-lg-3 mt-2 mb-2 ml-5'>
+
+                <input type="search" className="form-control" placeholder="Search Products..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
+
             </div>
             
 
@@ -157,7 +159,7 @@ export default function ViewProducts(){
                             <th>Category</th>
                             <th>Date</th>
                             <th>Size</th>
-                            <th>Price</th>
+                            <th>Price(Rs.)</th>
                             <th>Quantity</th>
                             <th>Stock</th>
                             <th>Actions</th>
@@ -196,8 +198,6 @@ export default function ViewProducts(){
                 </table>
             </form>
             </div>
-            <button onClick={handlePrint} className="print__button btn2"><FiPrinter/> Print Report </button>
-
         </div>
     );
 }
