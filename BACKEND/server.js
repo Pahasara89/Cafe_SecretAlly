@@ -8,6 +8,7 @@ const connectDB = require("./config/db");
 
 const productRouter = require("./routes/products.js");
 const Payment_DetailsRouter = require("./routes/Payment_Details.js");
+const DeliveryRouter = require("./routes/deliveries.js")
 
 
 
@@ -26,6 +27,7 @@ app.use('/uploads', express.static('BACKEND/uploads'));
 
 app.use('/product',productRouter);
 app.use('/Payment_Details',Payment_DetailsRouter);
+app.use('/Delivery',DeliveryRouter);
 
 
 

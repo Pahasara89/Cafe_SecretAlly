@@ -18,8 +18,9 @@ import Feedback from './components/Feedback';
 import AddPaymentDetails from './components/AddPaymentDetails';
 import ViewPaymentDetails from './components/ViewPaymentDetails';
 
-
-
+import AddDeliveries from './components/AddDeliveries';
+import ViewDeliveries from './components/ViewDeliveries';
+import GenerateReport from './components/GenerateReport';
  const App = () =>{
 
 
@@ -50,7 +51,9 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />
             <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
             
-            
+            <Route path="/AddDeliveries" element={<AddDeliveries/>}/>
+            <Route path="/ViewDeliveries" element={<ViewDeliveries/>}/>
+            <Route path="/GenerateReport" element={<GenerateReport/>}/>
 
          </Routes>
        </main>
