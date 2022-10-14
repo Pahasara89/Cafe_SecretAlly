@@ -1,0 +1,102 @@
+.body4{
+	font-family: sans-serif;
+	background-image: url('../images/Payment-Security1.png');
+	background-repeat: no-repeat;
+	height: 650px;
+	overflow: hidden;
+	background-size: cover;
+}
+.containers5 {
+	position: absolute;
+    top: 150px;
+    margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	width: 750px;
+	height: 450px;
+	padding: 60px 35px 35px 35px;
+	border-radius: 0px 0px 0px 0px;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 8px #333;
+
+
+
+}
+.containers6 {
+	position: absolute;
+    top: 300px;
+    margin-left: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	width: 750px;
+	height: 100px;
+	background-color: null;
+
+}
+.containers5 .Receipt3{
+    font-size: 25px;
+	color: rgb(0, 0, 0);
+	margin-bottom: 1px;
+    align-items: left;
+    margin-left: 50px;
+    margin-top: 5px;
+    
+
+}
+.containers5 .Receipt2{
+    font-size: 25px;
+	color: rgb(0, 0, 0);
+	margin-bottom: 1px;
+    align-items: left;
+    margin-left: 250px;
+    margin-top: -36px;
+    
+
+}
+
+
+.containers5 h1 {
+	font-size: 2.2rem;
+	color: rgb(0, 0, 0);
+	margin-bottom: 30px;
+
+}
+.containers6 button {
+	
+	border: none;
+	width: 30%;
+	height: 40px;
+    margin-left: 450px;
+    margin-top: 20px;
+	border-radius: 0px 20px 0px 20px;
+	font-size: 18px;
+	font-weight: 700; 
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	text-align: center;
+	background-color: rgba(8, 8, 8, 0.7);
+	box-shadow: 3px 3px 8px #10B48E, -3px -3px 8px #10B48E;
+	
+}
+
+.containers6 button:hover {
+	background-color: #10B48E;
+}
+
+.containers6 button:active {
+	background-color: #88ef9e;
+}
+.image1{
+    font-family: sans-serif;
+	background-image: url('../images/Paid.png');
+    border-radius: 50%;
+	background-repeat: no-repeat;
+	height: 130px;
+    width: 130px;
+	background-size: cover;
+    margin-top: -180px;
+    margin-left: 450px;
+
+}

@@ -3,7 +3,7 @@ import './DownloadInvoice.css'
 
 
 
-const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDeleteClick }) => {
+const PrintPaymentTable = ({Payment_Details , handleEditClick, handleDeleteClick }) => {
     
     const handleviweClick = (id) =>{
 
@@ -42,4 +42,4 @@ const ViewPaymentDetailsTable = ({Payment_Details , handleEditClick, handleDelet
     )
 }
 
-export default ViewPaymentDetailsTable;
+export default PrintPaymentTable;

@@ -49,7 +49,7 @@ import ViewSuccessPayment from './components/Payment_Success';
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />
             <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
             <Route path="/view_Payment_Details/:id" element={<ViewOnePaymentDetails/>} />
-            <Route path="/Success_payment/:id" element={<ViewSuccessPayment/>} />
+            <Route path="/Success_payment" element={<ViewSuccessPayment/>} />
             
 
          </Routes>

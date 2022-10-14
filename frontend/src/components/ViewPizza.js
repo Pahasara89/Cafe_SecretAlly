@@ -5,7 +5,10 @@ import '../App.css';
 const ViewPizza = ({product,userInfo}) => {
     const cat = product.category;
 
- 
+    const addtocard= (price)=>{
+        localStorage.setItem("price", price);
+        window.location.href = "/add_Payment"
+    }
  
 
     return(
@@ -25,6 +28,7 @@ const ViewPizza = ({product,userInfo}) => {
                                 type='button' 
                                 className='btn btn-warning btn-sm'
                                 disabled={product.quantity <= 0}
+                                onClick={()=>addtocard(product.price)}
                                 
                                 >
                                     Add to Cart

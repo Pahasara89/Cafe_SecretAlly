@@ -71,11 +71,13 @@ router.post('/add_Payment', async(req,res)=>{
 
     newPayment_Details.save().then(()=>{
        // alert('Payment successfully');
-        res.redirect('http://localhost:3000/add_Payment');
+        //res.redirect('http://localhost:3000/add_Payment');
+        return res.status(200).json({msg:"success"})
 
     }).catch((err)=>{
         alert('Payment Failed');
-        res.redirect('http://localhost:3000/add_Payment');
+        //res.redirect('http://localhost:3000/add_Payment');
+        return res.status(400).json({msg:"error"})
         console.log(err);
     })
 
