@@ -21,7 +21,8 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
 
 import ContactUs from './components/ContactUs';
 import AllComplaints from './components/AllComplaints';
-import AddFeedback from './components/AddFeedback';
+import AddComplaint from './components/AddComplaint';
+
 
 
 
@@ -51,7 +52,7 @@ import AddFeedback from './components/AddFeedback';
 
           
             <Route path="/contact" element={<ContactUs/>}/>
-            <Route path='/add-feedback' element={<AddFeedback/>}/>
+            <Route path='/add-feedback' element={<AddComplaint/>}/>
             <Route path='/view-feedback' element={<AllComplaints/>}/>
             
 

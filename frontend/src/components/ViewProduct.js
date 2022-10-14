@@ -128,10 +128,23 @@ export default function ViewProducts(){
     const handleDeleteClick = (id) => {
         
         axios.delete('http://localhost:5000/product/delete/'+id).then(() =>{
-            window.location.reload();
+            swal.fire({
+                title: "Success!",
+                text: "Deleted Successfully",
+                icon: "success",
+                showConfirmButton: false,
+            })
         }).catch((err) =>{
-            alert(err)
-        })
+            //alert(err)
+            swal.fire({
+                title: "Error!",
+                text: "Couldn't delete your Details",
+                icon: "error",
+            });
+        });
+        setTimeout(() => {
+            window.location.replace("http://localhost:3000/view");
+            }, 3000)
 
     }
 
@@ -159,7 +172,7 @@ export default function ViewProducts(){
                             <th>Category</th>
                             <th>Date</th>
                             <th>Size</th>
-                            <th>Price(Rs.)</th>
+                            <th>Price</th>
                             <th>Quantity</th>
                             <th>Stock</th>
                             <th>Actions</th>

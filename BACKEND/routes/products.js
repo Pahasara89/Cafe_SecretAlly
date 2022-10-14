@@ -139,6 +139,24 @@ router.route("/update/quantity/:ID").put(async(req,res)=>{
     })
 })
 
+//search product based on the product date
+
+router.post("/search-product", async (req, res) => {
+    try {
+        Product.find({
+            date: {
+                $gte: new Date(req.body.fromDate),
+                $lt: new Date(req.body.toDate),
+            },
+        })
+            .then((result) => {
+                res.json(result);
+            });
+    } catch (error) {
+        res.status(500).send({ message: error });
+    }
+});
+
 
 module.exports = router;
     

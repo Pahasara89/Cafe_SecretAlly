@@ -8,6 +8,7 @@ import { useReactToPrint } from "react-to-print";
 import './HomeNavBar.css'
 import AdminNavBar from "./AdminNavBar";
 import swal from "sweetalert2";
+import styles from "./style.module.css";
 
 export default function PrintReport() {
 
@@ -15,6 +16,17 @@ export default function PrintReport() {
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
+
+    const [data, setData] = useState({
+        fromDate: "",
+        toDate: ""
+    });
+
+
+    const handleChange = ({ currentTarget: input }) => {
+        setData({ ...data, [input.name]: input.value });
+    };
+
 
     const [products, setProducts] = useState([]);
     const [q, setQ] = useState("");
@@ -128,87 +140,154 @@ export default function PrintReport() {
 
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios
+            .post("http://localhost:5000/product/search-product", {
+                fromDate: data.fromDate,
+                toDate: data.toDate,
+            })
+            .then((response) => {
+                console.log(response.data);
+                setProducts(response.data);
+            });
+    };
+
+    const clearData = () => {
+        window.location.reload(false);
+    };
+
+
     return (
         <div>
             <AdminNavBar />
             <ViewProductNavBar />
 
+            <br></br>
+            <br></br>
 
-            <div id="repGSearch" className='col-lg-3 mt-2 mb-2 ml-5'>
-
-                <input type="search" className="form-control" placeholder="Search Products..." value={q} onChange={(e) => setQ(e.target.value)} />
-
-            </div>
-
-
-            <div ref={componentRef}>
-                <form onSubmit={updateData}>
-                    <table className='table '>
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <table style={{ marginLeft: "750px" }}>
                         <thead>
                             <tr>
-                                <th>ProductID</th>
-                                <th>ProductName</th>
-                                <th>Category</th>
-                                <th>Date</th>
-                                <th>Size</th>
-                                <th>Price(Rs.)</th>
-                                <th>Quantity</th>
-                                <th>Stock</th>
-
+                                <td>
+                                    <div >
+                                        <label>From Date     :</label><br></br>
+                                        <input
+                                            type="Date"
+                                            placeholder="Date"
+                                            name="fromDate"
+                                            onChange={handleChange}
+                                            value={data.fromDate}
+                                            required
+                                            className={styles.input}
+                                        />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style={{ marginLeft: "10px" }}>
+                                        <label>To Date      :</label><br></br>
+                                        <input
+                                            type="Date"
+                                            placeholder="Date"
+                                            name="toDate"
+                                            onChange={handleChange}
+                                            value={data.toDate}
+                                            required
+                                            className={styles.input}
+                                        />
+                                    </div>
+                                </td>
                             </tr>
                         </thead>
-
-                        <tbody>
-                            {products.filter((product) => {
-                                if (q === "") {
-                                    return product
-                                } else if (product.productName.toLowerCase().includes(q.toLowerCase())) {
-                                    return product
-                                }
-                            }).map((product) => (
-                                <Fragment>
-                                    <tr>
-                                        <td className='td'>{product.productID}</td>
-                                        <td className='td'>{product.productName}</td>
-                                        <td className='td'>{product.category}</td>
-                                        <td className='td'>{product.date.substring(0, 10)}</td>
-                                        <td className='td'>{product.size}</td>
-                                        <td className='td'>{product.price}</td>
-                                        <td>
-                                            {(() => {
-
-                                                if (product.quantity <= 25) {
-
-                                                    return (
-
-                                                        <div style={{ backgroundColor: 'red', color: 'white', textAlign: 'center' }}>Low</div>
-
-                                                    )
-
-                                                } else {
-
-                                                    return (
-
-                                                        <div style={{ backgroundColor: 'Green', color: 'white', textAlign: 'center' }}>Available</div>
-
-                                                    )
-
-                                                }
-
-                                            })()}
-                                        </td>
-                                        <td className='td'>{product.quantity}</td>
-                                    </tr>
-                                </Fragment>
-
-                            ))}
-                        </tbody>
-
+                    </table>
+                    <table style={{ marginLeft: "890px" }}>
+                        <tr>
+                            <td>
+                                <div style={{ marginLeft: "0px" }}>
+                                    <button className={styles.g_button} type="submit">
+                                        Search
+                                    </button>
+                                    <button className={styles.can_btn} style={{ marginLeft: "15px" }} onClick={clearData}>
+                                        Clear
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
                     </table>
                 </form>
-            </div>
-            <button onClick={handlePrint} className="print__button btn2"><FiPrinter /> Print Report </button>
 
+
+                <div ref={componentRef}>
+                    <form onSubmit={updateData}>
+                        <table className='table '>
+                            <thead>
+                                <tr>
+                                    <th>ProductID</th>
+                                    <th>ProductName</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Size</th>
+                                    <th>Price(Rs.)</th>
+                                    <th>Quantity</th>
+                                    <th>Stock</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {products.filter((product) => {
+                                    if (q === "") {
+                                        return product
+                                    } else if (product.productName.toLowerCase().includes(q.toLowerCase())) {
+                                        return product
+                                    }
+                                }).map((product) => (
+                                    <Fragment>
+                                        <tr>
+                                            <td className='td'>{product.productID}</td>
+                                            <td className='td'>{product.productName}</td>
+                                            <td className='td'>{product.category}</td>
+                                            <td className='td'>{product.date.substring(0, 10)}</td>
+                                            <td className='td'>{product.size}</td>
+                                            <td className='td'>{product.price}</td>
+                                            <td>
+                                                {(() => {
+
+                                                    if (product.quantity <= 25) {
+
+                                                        return (
+
+                                                            <div style={{ backgroundColor: 'red', color: 'white', textAlign: 'center' }}>Low</div>
+
+                                                        )
+
+                                                    } else {
+
+                                                        return (
+
+                                                            <div style={{ backgroundColor: 'Green', color: 'white', textAlign: 'center' }}>Available</div>
+
+                                                        )
+
+                                                    }
+
+                                                })()}
+                                            </td>
+                                            <td className='td'>{product.quantity}</td>
+                                        </tr>
+                                    </Fragment>
+
+                                ))}
+                            </tbody>
+
+                        </table>
+                    </form>
+                </div>
+                <button onClick={handlePrint} className="print__button btn2"><FiPrinter /> Print Report </button>
+
+            </div>
         </div>
     );
 }
