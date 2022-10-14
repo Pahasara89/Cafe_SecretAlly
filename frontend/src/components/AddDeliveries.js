@@ -8,10 +8,10 @@ import Swal from "sweetalert2";
 
 export default function AddDeliveries(){
 
-    const [customerName, setcustomerName] = useState("");
-    const [orderID, setorderID] = useState("");
-    const [customerContactNumber, setcustomerContactNumber] = useState("");
-    const [deliveryAddress, setdeliveryAddress] = useState("");
+    const [customerName, setcustomerName] = useState(localStorage.getItem("customerName"));
+    const [orderID, setorderID] = useState(localStorage.getItem("orderID"));
+    const [customerContactNumber, setcustomerContactNumber] = useState(localStorage.getItem("customerContactNumber"));
+    const [deliveryAddress, setdeliveryAddress] = useState(localStorage.getItem("deliveryAddress"));
     const [noofOrders, setnoofOrders] = useState("");
     const [driverName, setdriverName] = useState("");
     const [driverContactNumber, setdriverContactNumber] = useState("");
@@ -54,7 +54,7 @@ export default function AddDeliveries(){
     
     }
     return(
-        <div className="body">
+        <div className="bodys">
             <AdminNavBar/>
             <DeliveryAdminSideBar/>
        
@@ -70,7 +70,7 @@ export default function AddDeliveries(){
 
                 <div className="form-group">
                     <label for="customerName">Customer Name</label>
-                    <input type="text" name="customerName" className="form-control" id="customerName" placeholder="Enter Customer Name" required
+                    <input type="text" name="customerName" className="form-control" id="customerName" placeholder="Enter Customer Name" value={localStorage.getItem("customerName")} required
                     onChange={(e)=>{
                         setcustomerName(e.target.value);
                     }}
@@ -79,7 +79,7 @@ export default function AddDeliveries(){
                 <br />
                 <div className="form-group">
                     <label for="orderID">Order ID</label>
-                    <input type="text" name="orderID" className="form-control" id="orderID" placeholder="Enter Order ID" required
+                    <input type="text" name="orderID" className="form-control" id="orderID" placeholder="Enter Order ID" value={localStorage.getItem("orderID")} required
                     onChange={(e)=>{
                         setorderID(e.target.value);
                     }}
@@ -88,7 +88,7 @@ export default function AddDeliveries(){
                 <br />
                 <div className="form-group">
                     <label for="customerContactNumber">Customer Contact Number</label>
-                    <input type="text" name="customerContactNumber" className="form-control" id="customerContactNumber" placeholder="Enter Customer Contact Number" required pattern="^[0-9]+$" maxlength="10"
+                    <input type="text" name="customerContactNumber" className="form-control" id="customerContactNumber" placeholder="Enter Customer Contact Number" value={localStorage.getItem("customerContactNumber")} required pattern="^[0-9]+$" maxlength="10"
                      onChange={(e)=>{
                         setcustomerContactNumber(e.target.value);
                     }}
@@ -97,7 +97,7 @@ export default function AddDeliveries(){
                 <br />
                 <div className="form-group">
                     <label for="deliveryAddress">Delivery Address</label>
-                    <input type="text" name="deliveryAddress" className="form-control" id="deliveryAddress" placeholder="Enter Delivery Address" required
+                    <input type="text" name="deliveryAddress" className="form-control" id="deliveryAddress" placeholder="Enter Delivery Address" value={localStorage.getItem("deliveryAddress")} required
                      onChange={(e)=>{
                         setdeliveryAddress(e.target.value);
                     }}

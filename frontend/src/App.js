@@ -21,6 +21,8 @@ import ViewPaymentDetails from './components/ViewPaymentDetails';
 import AddDeliveries from './components/AddDeliveries';
 import ViewDeliveries from './components/ViewDeliveries';
 import GenerateReport from './components/GenerateReport';
+import AddOrders from './components/AddOrders';
+import ViewOrders from './components/ViewOrders';
  const App = () =>{
 
 
@@ -54,6 +56,8 @@ import GenerateReport from './components/GenerateReport';
             <Route path="/AddDeliveries" element={<AddDeliveries/>}/>
             <Route path="/ViewDeliveries" element={<ViewDeliveries/>}/>
             <Route path="/GenerateReport" element={<GenerateReport/>}/>
+            <Route path="/AddOrders" element={<AddOrders/>}/>
+            <Route path="/ViewOrders" element={<ViewOrders/>}/>
 
          </Routes>
        </main>

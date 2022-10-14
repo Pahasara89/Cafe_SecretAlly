@@ -9,7 +9,7 @@ function DeliveryAdminSideBar() {
          <NavLink to="/" activeClassName="">
         Home
       </NavLink>
-      <NavLink to="/Orders" activeClassName="">
+      <NavLink to="/ViewOrders" activeClassName="">
         Orders
       </NavLink>
 
