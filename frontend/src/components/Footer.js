@@ -32,7 +32,7 @@ function Footer() {
           </div>
           
 
-                <Link to = '/feedback'><button  className="feedback_btn"> Give Us Feedbacks </button></Link>
+                <Link to = '/add-feedback'><button  className="feedback_btn"> Give Us Feedbacks </button></Link>
 
           <div class='footer-link-items'>
             <h2>Contact</h2>

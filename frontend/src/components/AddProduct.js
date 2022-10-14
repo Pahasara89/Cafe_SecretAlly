@@ -21,7 +21,7 @@ export default function AddProduct() {
             <div className="containers">
                 <form action="http://localhost:5000/product/add" method="post" class="form img " encType="multipart/form-data">
 
-                    <h4>Add Product</h4>
+                    <h5>Add Product</h5>
                     <br />
 
                     <br />

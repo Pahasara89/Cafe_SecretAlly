@@ -45,7 +45,7 @@ function AdminNavBar () {
               <Nav>
                 {" "}
                 <Nav.Link>
-                <Link to='/' className='homenav-links'>
+                <Link to='/view-feedback' className='homenav-links'>
                          Feedbacks
                       </Link>
                 </Nav.Link>
