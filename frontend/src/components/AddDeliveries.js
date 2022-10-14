@@ -9,10 +9,10 @@ import Swal from "sweetalert2";
 export default function AddDeliveries(){
 
     const [customerName, setcustomerName] = useState("");
+    const [orderID, setorderID] = useState("");
     const [customerContactNumber, setcustomerContactNumber] = useState("");
     const [deliveryAddress, setdeliveryAddress] = useState("");
-    const [orderCategory, setorderCategory] = useState("");
-    const [quantity, setquantity] = useState("");
+    const [noofOrders, setnoofOrders] = useState("");
     const [driverName, setdriverName] = useState("");
     const [driverContactNumber, setdriverContactNumber] = useState("");
     const [deliveryDate, setdeliveryDate] = useState("");
@@ -22,10 +22,10 @@ export default function AddDeliveries(){
         
         const newDelivery = {
             customerName,
+            orderID,
             customerContactNumber,
             deliveryAddress,
-            orderCategory,
-            quantity,
+            noofOrders,
             driverName,
             driverContactNumber,
             deliveryDate
@@ -78,6 +78,15 @@ export default function AddDeliveries(){
                 </div>
                 <br />
                 <div className="form-group">
+                    <label for="orderID">Order ID</label>
+                    <input type="text" name="orderID" className="form-control" id="orderID" placeholder="Enter Order ID" required
+                    onChange={(e)=>{
+                        setorderID(e.target.value);
+                    }}
+                    />
+                </div>
+                <br />
+                <div className="form-group">
                     <label for="customerContactNumber">Customer Contact Number</label>
                     <input type="text" name="customerContactNumber" className="form-control" id="customerContactNumber" placeholder="Enter Customer Contact Number" required pattern="^[0-9]+$" maxlength="10"
                      onChange={(e)=>{
@@ -96,26 +105,22 @@ export default function AddDeliveries(){
                 </div>
                 <br />
                 <div className="form-group">
-                    <label for="orderCategory">Order Category</label>
-                    <select name="orderCategory" className="form-select" id="orderCategory"
+                    <label for="noofOrders">Number of Orders</label>
+                    <select name="noofOrders" className="form-select" id="noofOrders"
                      onChange={(e)=>{
-                        setorderCategory(e.target.value);
+                        setnoofOrders(e.target.value);
                     }}>
                         <option>Choose...</option>
-                        <option>Pizza</option>
-                        <option>Burgers</option>
-                        <option>Shawarma</option>
-                        <option>Hot dogs</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
                     </select>
-                </div>
-                <br />
-                <div className="form-group">
-                    <label for="quantity">Order Quantity</label>
-                    <input type="text" name="quantity" className="form-control" id="quantity" placeholder="Enter Order Quantity" required pattern="^[0-9]+$"
-                     onChange={(e)=>{
-                        setquantity(e.target.value);
-                    }}
-                    />
                 </div>
                 <br />
                 <div className="form-group">

@@ -12,6 +12,10 @@ const deliverySchema = new Schema({
         type : String,
         required: true
     },
+    orderID : {
+        type : String,
+        required: true
+    },
     customerContactNumber : {
         type: Number,
         required: true
@@ -20,11 +24,7 @@ const deliverySchema = new Schema({
         type: String,
         required: true
     },
-    orderCategory : {
-        type: String,
-        required: true
-    },
-    quantity : {
+    noofOrders : {
         type: Number,
         required: true
     },

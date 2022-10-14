@@ -5,10 +5,10 @@ let Delivery = require("../models/Delivery");
 router.route("/addDelivery").post(async (req, res) => {
     const deliveryId = req.body;
     const customerName = req.body.customerName;
+    const orderID =  req.body.orderID;
     const customerContactNumber = Number(req.body.customerContactNumber);
     const deliveryAddress = req.body.deliveryAddress;
-    const orderCategory = req.body.orderCategory;
-    const quantity = Number(req.body.quantity);
+    const noofOrders = Number(req.body.noofOrders);
     const driverName = req.body.driverName;
     const driverContactNumber = req.body.driverContactNumber;
     const deliveryDate = req.body.deliveryDate;
@@ -16,10 +16,10 @@ router.route("/addDelivery").post(async (req, res) => {
     const newDelivery = new Delivery({
         deliveryId,
         customerName,
+        orderID,
         customerContactNumber,
         deliveryAddress,
-        orderCategory,
-        quantity,
+        noofOrders,
         driverName,
         driverContactNumber,
         deliveryDate
@@ -69,14 +69,14 @@ router.route("/").get((req, res) => {
 
 router.route("/updateDelivery/:ID").put(async (req, res) => {
     let deliveryId = req.body.ID;
-    const { customerName, customerContactNumber, deliveryAddress, orderCategory, quantity, driverName, driverContactNumber, deliveryDate } = req.body;
+    const { customerName, orderID, customerContactNumber, deliveryAddress, noofOrders, driverName, driverContactNumber, deliveryDate } = req.body;
 
     const updateDelivery = {
         customerName,
+        orderID,
         customerContactNumber,
         deliveryAddress,
-        orderCategory,
-        quantity,
+        noofOrders,
         driverName,
         driverContactNumber,
         deliveryDate

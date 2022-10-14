@@ -199,6 +199,10 @@ const EditDelivery = ({editFormData, handleEditFormChange, handleCancelClick}) =
                      onChange={handleEditFormChange}/>           
             </td>
             <td>
+            <input type="text" name="orderID" className="form-control" value={editFormData.orderID} placeholder="Enter Order ID" required="requird"
+                     onChange={handleEditFormChange}/>           
+            </td>
+            <td>
             <input type="text" name="customerContactNumber" className="form-control" value={editFormData.customerContactNumber} placeholder="Enter Customer Contact Number" required
                     onChange={handleEditFormChange}/>
                     
@@ -208,18 +212,20 @@ const EditDelivery = ({editFormData, handleEditFormChange, handleCancelClick}) =
                     onChange={handleEditFormChange}/>
             </td>
             <td>
-            <select name="orderCategory" className="form-select" value={editFormData.orderCategory}
+            <select name="noofOrders" className="form-select" value={editFormData.noofOrders}
                      onChange={handleEditFormChange}>
                         <option>Choose...</option>
-                        <option>Pizza</option>
-                        <option>Burgers</option>
-                        <option>Shawarma</option>
-                        <option>Hot dogs</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
                     </select>
-            </td>
-            <td>
-            <input type="text" name="quantity" className="form-control" value={editFormData.quantity} placeholder="Enter Order Quantity" required
-                    onChange={handleEditFormChange}/>
             </td>
             <td>
             <select name="driverName" className="form-select" value={editFormData.driverName}

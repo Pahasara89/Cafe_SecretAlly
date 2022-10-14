@@ -9,10 +9,10 @@ import Swal from "sweetalert2";
 
 export default function ViewDeliveries() {
 
-    const componentRef = useRef();
-        const handlePrint = useReactToPrint({
-        content: () => componentRef.current,
-    });
+    //const componentRef = useRef();
+        //const handlePrint = useReactToPrint({
+        //content: () => componentRef.current,
+    //});
    
     const [deliveries, setDeliveries] = useState([]);
     const [q, setQ] = useState("");
@@ -29,10 +29,10 @@ export default function ViewDeliveries() {
     const [editFormData, setEditFormData] = useState({
         deliveryId: "",
         customerName: "",
+        orderID: "",
         customerContactNumber: "",
         deliveryAddress: "",
-        orderCategory: "",
-        quantity: "",
+        noofOrders: "",
         driverName: "",
         driverContactNumber: "",
         deliveryDate: "",
@@ -56,10 +56,10 @@ export default function ViewDeliveries() {
         const updateDelivery ={
             ID: editDelivery,
             customerName: editFormData.customerName,
+            orderID: editFormData.orderID,
             customerContactNumber: editFormData.customerContactNumber,
             deliveryAddress: editFormData.deliveryAddress,
-            orderCategory: editFormData.orderCategory,
-            quantity: editFormData.quantity,
+            noofOrders: editFormData.noofOrders,
             driverName: editFormData.driverName,
             driverContactNumber: editFormData.driverContactNumber,
             deliveryDate: editFormData.deliveryDate
@@ -96,10 +96,10 @@ export default function ViewDeliveries() {
         const formValues = {
             deliveryId: delivery.deliveryId,
             customerName: delivery.customerName,
+            orderID: delivery.orderID,
             customerContactNumber: delivery.customerContactNumber,
             deliveryAddress: delivery.deliveryAddress,
-            orderCategory: delivery.orderCategory,
-            quantity: delivery.quantity,
+            noofOrders: delivery.noofOrders,
             driverName: delivery.driverName,
             driverContactNumber: delivery.driverContactNumber,
             deliveryDate: delivery.deliveryDate,
@@ -156,17 +156,17 @@ export default function ViewDeliveries() {
             <br></br>
             
                  <div className="row">
-                 <div ref={componentRef}>
+                 <div>
                  <form onSubmit={updateData}>
                  <table className="table table-striped table borderd">
                      <thead>
                          <tr>
                              <th>Delivery ID</th>
                              <th>Customer Name</th>
+                             <th>Order ID</th>
                              <th>Customer Contact</th>
                              <th>Address</th>
-                             <th>Order Category</th>
-                             <th>Quantity</th>
+                             <th>Number of Orders</th>
                              <th>Driver Name</th>
                              <th>Driver Contact</th>
                              <th>Delivery Date</th>
@@ -204,7 +204,6 @@ export default function ViewDeliveries() {
                  </div>
 
              </div>
-             <button onClick={handlePrint} className="btn btn-outline-success"> Print Report </button>
 
         </div>
         </div>

@@ -179,10 +179,10 @@ export default function GenerateReport() {
                                     <tr>
                                         <th>Delivery ID</th>
                                         <th>Customer Name</th>
+                                        <th>Order ID</th>
                                         <th>Customer Contact</th>
                                         <th>Address</th>
-                                        <th>Order Category</th>
-                                        <th>Quantity</th>
+                                        <th>Number of Orders</th>
                                         <th>Driver Name</th>
                                         <th>Driver Contact</th>
                                         <th>Delivery Date</th>
@@ -194,10 +194,10 @@ export default function GenerateReport() {
                                             <tr key={deliveries.deliveryId}>
                                                 <td> {deliveries.deliveryId}</td>
                                                 <td> {deliveries.customerName}</td>
+                                                <td> {deliveries.orderID}</td>
                                                 <td> {deliveries.customerContactNumber}</td>
                                                 <td> {deliveries.deliveryAddress}</td>
-                                                <td> {deliveries.orderCategory}</td>
-                                                <td> {deliveries.quantity}</td>
+                                                <td> {deliveries.noofOrders}</td>
                                                 <td> {deliveries.driverName}</td>
                                                 <td> {deliveries.driverContactNumber}</td>
                                                 <td> {deliveries.deliveryDate}</td>

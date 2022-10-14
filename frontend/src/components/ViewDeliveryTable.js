@@ -7,10 +7,10 @@ const ViewDeliveryTable = ({delivery , handleEditClick, handleDeleteClick}) => {
             <tr>
                 <td className='td'>{delivery.deliveryId}</td>
                 <td className='td'>{delivery.customerName}</td>
+                <td className='td'>{delivery.orderID}</td>
                 <td className='td'>{delivery.customerContactNumber}</td>
                 <td className='td'>{delivery.deliveryAddress}</td>
-                <td className='td'>{delivery.orderCategory}</td>
-                <td className='td'>{delivery.quantity}</td>
+                <td className='td'>{delivery.noofOrders}</td>
                 <td className='td'>{delivery.driverName}</td>
                 <td className='td'>{delivery.driverContactNumber}</td>
                 <td className='td'>{delivery.deliveryDate}</td>  
