@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 //import '../App.css'
 import './AddOrders.css'
-//import './HomeNavBar.css'
+import HomeNavBar from "./HomeNavBar";
+import Footer from "./Footer";
 //import AdminNavBar from "./AdminNavBar";
 import Swal from "sweetalert2";
 import axios from "axios"
@@ -44,7 +45,9 @@ export default function AddOrders() {
 
     }
         return(
+            <>
             <div className="bodies">
+                <HomeNavBar/>
            
             <div className="containers">
                 
@@ -95,6 +98,8 @@ export default function AddOrders() {
             </div>
             
         </div>
+        <Footer/>
+        </>
         )
                         
 }

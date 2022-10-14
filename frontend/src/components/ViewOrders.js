@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios";
+import AdminNavBar from './AdminNavBar';
+import DeliveryAdminSideBar from './NavBar/DeliveryAdminSideBar';
 
 
 export default function ViewOrders() {
@@ -25,6 +27,8 @@ export default function ViewOrders() {
 
     return (
         <div>
+             <AdminNavBar/>
+            <DeliveryAdminSideBar/>
             <div className="container">
                 <br></br>
                 <h1 className="text-center">Checkout Details</h1>
