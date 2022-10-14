@@ -12,6 +12,7 @@ const CustomerRouter = require("./routes/Customer.js");
 
 
 
+
 const app  =express();
 dotenv.config();
 connectDB();
@@ -27,7 +28,10 @@ app.use('/uploads', express.static('BACKEND/uploads'));
 
 app.use('/product',productRouter);
 app.use('/Payment_Details',Payment_DetailsRouter);
+
 app.use('/Customer',CustomerRouter);
+
+
 
 
 

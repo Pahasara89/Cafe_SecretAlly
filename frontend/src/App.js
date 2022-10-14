@@ -25,6 +25,7 @@ import AddFeedback from './components/AddFeedback';
 
 
 
+
  const App = () =>{
 
 
@@ -57,7 +58,7 @@ import AddFeedback from './components/AddFeedback';
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />
             <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
             
-            
+          
 
          </Routes>
        </main>

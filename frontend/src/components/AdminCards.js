@@ -20,7 +20,7 @@ function AdminCards() {
                     src="images/delivery.gif"
                     text="Manage Delivere Details"
                     label="Delivery Management"
-                    path="/add-delivery"
+                    path="/ViewDeliveries"
                 />
 
                 
