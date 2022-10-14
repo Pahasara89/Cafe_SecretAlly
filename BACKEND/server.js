@@ -7,7 +7,8 @@ const connectDB = require("./config/db");
 
 
 const productRouter = require("./routes/products.js");
-
+const userRoute=require("./routes/user.route");
+const cartRoute=require("./routes/cart.route");
 
 
 const app  =express();
@@ -25,7 +26,9 @@ app.use('/uploads', express.static('BACKEND/uploads'));
 
 app.use('/product',productRouter);
 
+app.use("/user",userRoute);
 
+app.use("/cart",cartRoute);
 
 const PORT=process.env.PORT  || 5000;
 

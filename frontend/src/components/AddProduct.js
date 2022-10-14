@@ -18,7 +18,7 @@ export default function AddProduct() {
             <AddProductNavBar />
 
             <div className="containers">
-                <form action="http://localhost:5000/product/add" method="post" class="form img " encType="multipart/form-data">
+                <form action="http://localhost:5000/product/add"  method="post" class="form img " encType="multipart/form-data">
 
                     <h1>Add Product</h1>
                     <br />

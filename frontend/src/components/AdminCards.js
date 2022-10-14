@@ -5,8 +5,8 @@ import './AdminCards.css'
 function AdminCards() {
   return (
     <div className='cards'>
-      <h1>Hello..</h1>
-      <h1>Welcome To Management Section</h1>
+      <h1>Hello Admin</h1>
+      <h1>Welcome to Cafe SecretAlly Management Section</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>
@@ -32,13 +32,14 @@ function AdminCards() {
                     src="images/user.jpg"
                     text="Details of Users"
                     label="User Management"
-                    path="/userManagement"
+                    path="/allu"
                 />
 
                
                 
                 
             </ul>
+            
             
         </div>
       </div>

@@ -80,6 +80,11 @@ function HomeNavBar () {
                   <Nav.Link href="/customer-home">
                           Home     
                 </Nav.Link>
+                <Nav.Link>
+                  <Link to='/profile' className='homenav-links'>
+                          profile
+                  </Link>
+                </Nav.Link>
 
                 <Nav.Link>
                   <Link to='/contact' className='homenav-links'>
@@ -119,6 +124,18 @@ function HomeNavBar () {
                 <Link to='/customer-home' className='homenav-links'>
                           Home
                       </Link>
+                </Nav.Link>
+                <Nav.Link>
+                <Link to='/cart' className='homenav-links'>
+                          Shopping Cart
+                      </Link>
+                </Nav.Link>
+                
+
+                <Nav.Link>
+                  <Link to='/profile' className='homenav-links'>
+                          profile
+                  </Link>
                 </Nav.Link>
   
                 <Nav.Link>

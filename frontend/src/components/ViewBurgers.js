@@ -3,9 +3,29 @@ import {Card} from 'react-bootstrap';
 import {useDispatch} from 'react-redux';
 import '../App.css';
 import {Col} from 'react-bootstrap';
+import { Axios } from 'axios';
 
 const ViewBurgers = ({product,userInfo}) => {
     const cat = product.category;
+
+    function addToCart(pro_id,pro_name,price) {
+        const userId = localStorage.getItem("userId");
+        const newCart ={
+          productName:pro_name,
+          product_id:pro_id,
+          price:price,
+          discount:"20",
+          quantity:"1",
+          userId:userId
+        }
+    
+        Axios.post("http://localhost:5000/cart/insertCart",newCart).then(
+          res => {
+            console.log(res.data);
+            console.log("Item Add to cart Successfully");
+          }
+        )
+      }
 
 
 
@@ -26,6 +46,7 @@ const ViewBurgers = ({product,userInfo}) => {
                                 type='button' 
                                 className='btn btn-warning btn-sm'
                                 disabled={product.quantity <= 0}
+                                // onClick={() =>{} }
                               
                                 >
                                     Add to Cart
