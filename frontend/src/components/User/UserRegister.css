@@ -1,0 +1,130 @@
+.form {
+	margin-left: 15%;
+	margin-right: 15%;
+
+}
+
+
+
+.bodies99 {
+	font-family: sans-serif;
+	background-image: url('../../images/final.jpg');
+	background-repeat: no-repeat;
+	height: 1050px;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.containers99 {
+	position: center;
+	top: 500px;
+	left: 650px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	height: 900px;
+	border-radius: 10px;
+	background-color: rgba(5, 3, 3, 0.5);
+	box-shadow: 0 0 8px #333;
+
+
+
+}
+
+.containers99 h1 {
+	font-size: 2.2rem;
+	color: black;
+	margin-bottom: 1px;
+
+}
+
+.containers99 label {
+	font-weight: 350;
+	color: black
+}
+
+.containers99 input {
+	max-width: 600px;
+	width: 500px;
+	height: 40px;
+	background-color: white;
+	margin: 1px 0;
+	border-radius: 7px;
+	display: grid;
+	grid-template-columns: 15% 85%;
+	padding: 0 0.100rem;
+	position: relative;
+	line-height: 1;
+	font-weight: 600;
+	margin-bottom: 18px;
+
+}
+
+.containers99 input placeholder {
+	color: white;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	background: none;
+	width: 50%;
+	font-size: 18px;
+	color: white;
+	padding: 20px 10px 20px 5px;
+	margin-bottom: 30px;
+	border-radius: 25px;
+	box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.containers99 button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	height: 40px;
+	border-radius: 7px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	text-align: center;
+	background-color: #779598;
+	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+	transition: all 0.5s;
+	margin-left: 30px;
+}
+
+.containers99 button:hover {
+	background-color: #10B48E;
+}
+
+.containers99 button:active {
+	background-color: #88ef9e;
+}
+
+.containers99 buttons {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 30%;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	text-align: center;
+	background-color: #779598;
+	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+	transition: all 0.5s;
+	margin-left: 50px;
+}
+
+.containers99 buttons:hover {
+	background-color: #e01212;
+}
+
+.containers99 buttons:active {
+	background-color: #e31313;
+}

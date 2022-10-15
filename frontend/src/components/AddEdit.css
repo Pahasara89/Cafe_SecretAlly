@@ -10,10 +10,7 @@
 .body {
 	font-family: sans-serif;
 	background-image: url('../images/2021-07_Web2_Banners_DaaS.jpg');
-	background-repeat: no-repeat;
-	height: 1050px;
-	overflow: hidden;
-	background-size: cover;
+	
 }
 
 .containerss {

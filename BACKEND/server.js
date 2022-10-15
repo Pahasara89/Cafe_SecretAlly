@@ -12,7 +12,8 @@ const DeliveryRouter = require("./routes/deliveries.js");
 const OrderRouter = require("./routes/orders.js");
 const CustomerRouter = require("./routes/Customer.js");
 
-
+const userRegistrationRouter = require("./routes/userRegistration");
+const userLoginRouter = require("./routes/userLogin");
 
 
 
@@ -38,8 +39,8 @@ app.use('/Order',OrderRouter);
 
 app.use('/Customer',CustomerRouter);
 
-
-
+app.use("/user",userRegistrationRouter);
+app.use("/user/login",userLoginRouter);
 
 
 

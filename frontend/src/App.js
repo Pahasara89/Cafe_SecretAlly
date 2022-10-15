@@ -33,6 +33,10 @@ import AddSuccess from './components/Payment_Success';
 import ViewOnePaymentDetails from './components/ViweOnePaymentData';
 import PrintPaymentDetail from './components/printPaymentDetails';
 
+import LoadingPage from './components/LoadingPage';
+import UserRegistration from './components/User/UserRegistration';
+import UserLogin from './components/User/UserLogin';
+
 
 
 
@@ -79,6 +83,12 @@ import PrintPaymentDetail from './components/printPaymentDetails';
             <Route path="/GenerateReport" element={<GenerateReport/>}/>
             <Route path="/AddOrders" element={<AddOrders/>}/>
             <Route path="/ViewOrders" element={<ViewOrders/>}/>
+
+            <Route path="/LoadingPage" element={<LoadingPage/>}/>
+            <Route path="/UserRegistration" element={<UserRegistration/>}/>
+            <Route path="/UserLogin" element={<UserLogin/>}/>
+            
+
 
 
 
