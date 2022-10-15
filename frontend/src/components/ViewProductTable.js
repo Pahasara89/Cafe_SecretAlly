@@ -1,5 +1,6 @@
 import React from 'react';
 import './DownloadInvoice.css'
+import {Link} from "react-router-dom";
 
 const ViewProductTable = ({product , handleEditClick, handleDeleteClick}) => {
     return(
@@ -37,6 +38,7 @@ const ViewProductTable = ({product , handleEditClick, handleDeleteClick}) => {
                 </td>
                 <td>
                     <button type="button" onClick={(e) => handleEditClick(e,product)}className="btn btn-outline-success">Edit</button>
+                    <Link to ='/view-admin'><button type="button" className="btn btn-outline-warning">View</button></Link>
                     <button type="button" onClick={() => handleDeleteClick(product._id)}className="btn btn-outline-danger">Delete</button>
                 </td>
             </tr>

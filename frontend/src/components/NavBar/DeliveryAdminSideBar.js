@@ -6,7 +6,7 @@ import './DeliveryAdminSideBar.css'
 function DeliveryAdminSideBar() {
   return (
     <div className="topnav">
-         <NavLink to="/" activeClassName="">
+         <NavLink to="/admin-home" activeClassName="">
         Home
       </NavLink>
       <NavLink to="/ViewOrders" activeClassName="">

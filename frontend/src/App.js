@@ -40,6 +40,14 @@ import UserLogin from './components/User/UserLogin';
 
 
 
+
+
+
+import ViewAdmin from './components/ViewAdmin';
+
+
+
+
  const App = () =>{
 
 
@@ -59,8 +67,8 @@ import UserLogin from './components/User/UserLogin';
             <Route path="/pizza" element={<Pizza/>} />
             <Route path="/shawarma" element={<Shawarma/>} />
             <Route path="/hotdogs" element={<HotDogs/>} />
-            <Route path="/cart" element={<Cart />} />
             <Route path="/add" element={<AddProduct/>} />
+            <Route path = "view-admin" element={<ViewAdmin/>}/>
             <Route path="printreport" element={<PrintReport/>}/>
 
           
@@ -84,6 +92,7 @@ import UserLogin from './components/User/UserLogin';
             <Route path="/AddOrders" element={<AddOrders/>}/>
             <Route path="/ViewOrders" element={<ViewOrders/>}/>
 
+
             <Route path="/LoadingPage" element={<LoadingPage/>}/>
             <Route path="/UserRegistration" element={<UserRegistration/>}/>
             <Route path="/UserLogin" element={<UserLogin/>}/>
@@ -92,7 +101,9 @@ import UserLogin from './components/User/UserLogin';
 
 
 
+
          </Routes>
+      
        </main>
        
      </div>
