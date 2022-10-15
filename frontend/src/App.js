@@ -18,23 +18,16 @@ import PrintReport from './components/PrintReport';
 import AddPaymentDetails from './components/AddPaymentDetails';
 import ViewPaymentDetails from './components/ViewPaymentDetails';
 
-<<<<<<< HEAD
 import AddDeliveries from './components/AddDeliveries';
 import ViewDeliveries from './components/ViewDeliveries';
 import GenerateReport from './components/GenerateReport';
 import AddOrders from './components/AddOrders';
 import ViewOrders from './components/ViewOrders';
-=======
 
 import ContactUs from './components/ContactUs';
 import AllComplaints from './components/AllComplaints';
 import AddComplaint from './components/AddComplaint';
 
-
-
-
-
->>>>>>> c89f8c4852f216f71d8ed7d7e459ff4bd5fcab6f
  const App = () =>{
 
 
@@ -67,15 +60,12 @@ import AddComplaint from './components/AddComplaint';
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />
             <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
             
-<<<<<<< HEAD
+
             <Route path="/AddDeliveries" element={<AddDeliveries/>}/>
             <Route path="/ViewDeliveries" element={<ViewDeliveries/>}/>
             <Route path="/GenerateReport" element={<GenerateReport/>}/>
             <Route path="/AddOrders" element={<AddOrders/>}/>
             <Route path="/ViewOrders" element={<ViewOrders/>}/>
-=======
-          
->>>>>>> c89f8c4852f216f71d8ed7d7e459ff4bd5fcab6f
 
          </Routes>
        </main>

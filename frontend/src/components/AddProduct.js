@@ -22,8 +22,11 @@ export default function AddProduct() {
         <div className="body">
             <AdminNavBar/>
             <AddProductNavBar />
+            
+            <br></br>
+            <br></br>
 
-            <div className="containers">
+            <div className="containerss">
                 <form action="http://localhost:5000/product/add" method="post" class="form img " encType="multipart/form-data">
 
                     <h5>Add Product</h5>

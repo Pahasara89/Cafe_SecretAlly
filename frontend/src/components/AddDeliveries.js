@@ -54,7 +54,7 @@ export default function AddDeliveries(){
     
     }
     return(
-        <div className="bodys">
+        <div className="bodyss">
             <AdminNavBar/>
             <DeliveryAdminSideBar/>
        
