@@ -28,7 +28,6 @@ import ContactUs from './components/ContactUs';
 import AllComplaints from './components/AllComplaints';
 
 import AddComplaint from './components/AddComplaint';
-import AddFeedback from './components/AddFeedback';
 
 import AddSuccess from './components/Payment_Success';
 import ViewOnePaymentDetails from './components/ViweOnePaymentData';
