@@ -36,6 +36,14 @@ import PrintPaymentDetail from './components/printPaymentDetails';
 
 
 
+
+
+
+import ViewAdmin from './components/ViewAdmin';
+
+
+
+
  const App = () =>{
 
 
@@ -55,8 +63,8 @@ import PrintPaymentDetail from './components/printPaymentDetails';
             <Route path="/pizza" element={<Pizza/>} />
             <Route path="/shawarma" element={<Shawarma/>} />
             <Route path="/hotdogs" element={<HotDogs/>} />
-            <Route path="/cart" element={<Cart />} />
             <Route path="/add" element={<AddProduct/>} />
+            <Route path = "view-admin" element={<ViewAdmin/>}/>
             <Route path="printreport" element={<PrintReport/>}/>
 
           
@@ -80,9 +88,10 @@ import PrintPaymentDetail from './components/printPaymentDetails';
             <Route path="/AddOrders" element={<AddOrders/>}/>
             <Route path="/ViewOrders" element={<ViewOrders/>}/>
 
-
+        
 
          </Routes>
+      
        </main>
        
      </div>
