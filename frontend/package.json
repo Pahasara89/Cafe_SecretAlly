@@ -6,6 +6,7 @@
   "dependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@material/card": "^14.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -32,7 +33,7 @@
     "redux-thunk": "^2.4.1",
     "stripe": "^9.13.0",
     "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.4.32",
+    "sweetalert2": "^11.5.1",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },

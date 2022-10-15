@@ -71,11 +71,13 @@ router.post('/add_Payment', async(req,res)=>{
 
     newPayment_Details.save().then(()=>{
        // alert('Payment successfully');
-        res.redirect('http://localhost:3000/add_Payment');
+        //res.redirect('http://localhost:3000/add_Payment');
+        return res.status(200).json({msg:"success"})
 
     }).catch((err)=>{
         alert('Payment Failed');
-        res.redirect('http://localhost:3000/add_Payment');
+        //res.redirect('http://localhost:3000/add_Payment');
+        return res.status(400).json({msg:"error"})
         console.log(err);
     })
 
@@ -89,6 +91,18 @@ router.route("/view_Payment").get((req,res)=>{
     }).catch((err)=>{
         console.log(err)
     })
+})
+
+router.get("/view_Payment/:id" , async(req,res)=>{
+    const onePayment_Details = Payment_Details.findOne({_id:req.params.id} , function(err , result){
+        if(err){
+            res.json({"err":err})
+        }else{
+            res.json({"result":result})
+        }
+    })
+
+
 })
 
 

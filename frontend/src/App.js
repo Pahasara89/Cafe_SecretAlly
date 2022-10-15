@@ -26,7 +26,16 @@ import ViewOrders from './components/ViewOrders';
 
 import ContactUs from './components/ContactUs';
 import AllComplaints from './components/AllComplaints';
+
 import AddComplaint from './components/AddComplaint';
+import AddFeedback from './components/AddFeedback';
+
+import AddSuccess from './components/Payment_Success';
+import ViewOnePaymentDetails from './components/ViweOnePaymentData';
+import PrintPaymentDetail from './components/printPaymentDetails';
+
+
+
 
  const App = () =>{
 
@@ -59,6 +68,11 @@ import AddComplaint from './components/AddComplaint';
 
             <Route path="/add_Payment" element={<AddPaymentDetails/>} />
             <Route path="/view_Payment" element={<ViewPaymentDetails/>} />
+
+            <Route path="/view_Payment_Details/:id" element={<ViewOnePaymentDetails/>} />
+            <Route path="/Success_payment" element={<AddSuccess/>} />
+            <Route path="/printPaymentDetails" element={<PrintPaymentDetail/>} />
+            
             
 
             <Route path="/AddDeliveries" element={<AddDeliveries/>}/>
@@ -66,6 +80,8 @@ import AddComplaint from './components/AddComplaint';
             <Route path="/GenerateReport" element={<GenerateReport/>}/>
             <Route path="/AddOrders" element={<AddOrders/>}/>
             <Route path="/ViewOrders" element={<ViewOrders/>}/>
+
+
 
          </Routes>
        </main>

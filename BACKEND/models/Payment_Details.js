@@ -33,7 +33,7 @@ const Payment_DetailsSchema = new Schema({
         unique: true,
     },
     Expiry : {
-        type : Number,
+        type : String,
         required : true
     },
     Cvv : {

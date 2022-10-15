@@ -1,8 +1,8 @@
 import React, {useState,useEffect,Fragment,useRef} from 'react';
-import AddPaymentDetailsNavBar from './AddPaymentDetailsNavBar';
+import PrintPaymentDetailsNavBar from './printPaymentDetailsNavBar';
 import axios from 'axios';
 import EditPayment from './EditPayment';
-import ViewPaymentTable from './ViewPaymentTable';
+import ViewPaymentTable from './PrintPaymentTable';
 import '../App.css';
 import './AddProductNavBar.css'
 import {FiPrinter} from 'react-icons/fi';
@@ -10,7 +10,6 @@ import { useReactToPrint } from "react-to-print";
 import './HomeNavBar.css'
 import AdminNavBar from "./AdminNavBar";
 import './ViweMorePayment.css'
-import { Link } from 'react-router-dom';
 
 
 
@@ -182,7 +181,7 @@ export default function ViewPaymentDetails(){
     return(
         <div >
             <AdminNavBar/>
-            <AddPaymentDetailsNavBar/>
+            <PrintPaymentDetailsNavBar/>
             
             
             <div className='search-container'>
@@ -201,7 +200,7 @@ export default function ViewPaymentDetails(){
                             <th>Order ID</th>
                             <th>Amount</th>
                             <th>Date</th>
-                            <th>Action</th>
+                            
                         </tr>
                     </thead>
 
@@ -213,16 +212,14 @@ export default function ViewPaymentDetails(){
                                      Payment_Details.Pay_ID.toLowerCase().includes(q.toLowerCase()) ||
                                      Payment_Details.Order_ID.toLowerCase().includes(q.toLowerCase())||
                                      Payment_Details.Pay_date.toLowerCase().includes(q.toLowerCase())){
-                                return Payment_Details
-                            }
+                       return Payment_Details
+                   }
                         }).map((Payment_Details)=> (
                             <Fragment>
 
                                 {editPayment === Payment_Details._id ? (
                                     <EditPayment 
-                                        editFormData={editFormData} 
-                                        handleEditFormChange={handleEditFormChange}
-                                        handleCancelClick={handleCancelClick}
+                                       
                                     />
                                  ) :
                                 /* (
@@ -235,9 +232,7 @@ export default function ViewPaymentDetails(){
                                   (
                                     <ViewPaymentTable 
                                         Payment_Details={Payment_Details}
-                                        handleEditClick={handleEditClick}
-                                        handleViweClick={handleviweClick}
-                                        handleDeleteClick={handleDeleteClick}
+                                        
                                     />
                                  )}
                                  
@@ -249,7 +244,7 @@ export default function ViewPaymentDetails(){
                 </table>
             </form>
             </div>
-            <Link to="/printPaymentDetails"><button  className="print__button btn2"><FiPrinter/> Print Report </button></Link>
+            <button onClick={handlePrint} className="print__button btn2"><FiPrinter/> Print Report </button>
 
         </div>
     );
