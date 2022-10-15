@@ -5,8 +5,8 @@ import './AdminCards.css'
 function AdminCards() {
   return (
     <div className='cards'>
-      <h1>Hello Admin</h1>
-      <h1>Welcome to Cafe SecretAlly Management Section</h1>
+      <h1>Welcome to Cafe SecretAlly </h1>
+      <h1>Management Section</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>

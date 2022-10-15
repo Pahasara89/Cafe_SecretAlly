@@ -2,7 +2,6 @@ import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import HomeNavBar from './HomeNavBar';
 import {Row,Container} from 'react-bootstrap';
-import { useSelector } from 'react-redux';
 import ViewBurgers from './ViewBurgers';
 
 
@@ -10,8 +9,6 @@ export default function Burgers() {
 
     const [products,setProducts] = useState([]);
 
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
 
     useEffect(() =>{
 
@@ -37,7 +34,7 @@ export default function Burgers() {
                  <Row>
                     {products.map((product)=> {
                         return(
-                            <ViewBurgers product={product} userInfo={userInfo}/>
+                            <ViewBurgers product={product} />
                         )
                     })}
                  </Row>

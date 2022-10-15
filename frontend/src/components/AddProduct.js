@@ -10,6 +10,11 @@ import AdminNavBar from "./AdminNavBar";
 
 export default function AddProduct() {
 
+    const clearData = () => {
+        window.location.reload(false);
+    };
+
+
 
     return (
     
@@ -21,7 +26,7 @@ export default function AddProduct() {
             <div className="containers">
                 <form action="http://localhost:5000/product/add" method="post" class="form img " encType="multipart/form-data">
 
-                    <h1>Add Product</h1>
+                    <h5>Add Product</h5>
                     <br />
 
                     <br />
@@ -81,7 +86,7 @@ export default function AddProduct() {
                     <br />
 
                     <div className="col-md-5 element">
-                        <label for="inputQuant" className="form-label1">Price(RS.)</label>
+                        <label for="inputQuant" className="form-label1">Price(LKR.)</label>
                         <input name="price" type="number" className="form-control" id="inputQuant" placeholder="Enter unit price"
                         />
                     </div>
@@ -112,7 +117,8 @@ export default function AddProduct() {
                     <br />
 
                     <button type="submit" className="btn Addbtn">Add Product</button>
-                    <buttons type="clear" className="btn Addbtn1">Clear</buttons>
+                    <buttons type="clear" className="btn Addbtn1" onClick={clearData}>Clear</buttons>
+
                     <br />
 
                 </form>

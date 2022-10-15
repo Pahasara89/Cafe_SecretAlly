@@ -128,10 +128,23 @@ export default function ViewProducts(){
     const handleDeleteClick = (id) => {
         
         axios.delete('http://localhost:5000/product/delete/'+id).then(() =>{
-            window.location.reload();
+            swal.fire({
+                title: "Success!",
+                text: "Deleted Successfully",
+                icon: "success",
+                showConfirmButton: false,
+            })
         }).catch((err) =>{
-            alert(err)
-        })
+            //alert(err)
+            swal.fire({
+                title: "Error!",
+                text: "Couldn't delete your Details",
+                icon: "error",
+            });
+        });
+        setTimeout(() => {
+            window.location.replace("http://localhost:3000/view");
+            }, 3000)
 
     }
 
@@ -142,8 +155,10 @@ export default function ViewProducts(){
             <ViewProductNavBar/>
             
             
-            <div className='search-container'>
-                <input type="text" className="search" placeholder="Search Products..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
+            <div id="repGSearch" className='col-lg-3 mt-2 mb-2 ml-5'>
+
+                <input type="search" className="form-control" placeholder="Search Products..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
+
             </div>
             
 
@@ -196,8 +211,6 @@ export default function ViewProducts(){
                 </table>
             </form>
             </div>
-            <button onClick={handlePrint} className="print__button btn2"><FiPrinter/> Print Report </button>
-
         </div>
     );
 }

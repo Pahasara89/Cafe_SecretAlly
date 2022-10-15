@@ -60,18 +60,32 @@
   }
   
 .feedback_btn {
-
-	width: 250px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 70%;
 	height: 40px;
+	border-radius: 10px;
 	font-size: 18px;
 	font-weight: 700;
 	font-family: "Lato", sans-serif;
 	color: #fff;
 	text-align: center;
-	background-color: #10B48E;
-	
-	
+	background-color: rgba(8, 8, 8, 0.7);
+	box-shadow: 3px 3px 8px #10B48E, -3px -3px 8px #10B48E;
+	transition: all 0.5s;
+	margin-left: 50px;
+  margin-right: 50px;
 }
+
+.feedback_btn:hover {
+	background-color: #10B48E;
+}
+
+.feedback_btn:active {
+	background-color: #88ef9e;
+}
+
 
   .footer-link-items {
     display: flex;
@@ -127,7 +141,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     margin: 40px auto 0 auto;
   }
