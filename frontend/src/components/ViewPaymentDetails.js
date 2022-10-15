@@ -10,6 +10,7 @@ import { useReactToPrint } from "react-to-print";
 import './HomeNavBar.css'
 import AdminNavBar from "./AdminNavBar";
 import './ViweMorePayment.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -208,7 +209,10 @@ export default function ViewPaymentDetails(){
                         {Payment_Details.filter((Payment_Details)=> {
                             if(q === ""){
                                 return Payment_Details
-                            }else if(Payment_Details.BanK_Owner_Name.toLowerCase().includes(q.toLowerCase())) {
+                            }else if(Payment_Details.BanK_Owner_Name.toLowerCase().includes(q.toLowerCase())||
+                                     Payment_Details.Pay_ID.toLowerCase().includes(q.toLowerCase()) ||
+                                     Payment_Details.Order_ID.toLowerCase().includes(q.toLowerCase())||
+                                     Payment_Details.Pay_date.toLowerCase().includes(q.toLowerCase())){
                                 return Payment_Details
                             }
                         }).map((Payment_Details)=> (
@@ -245,7 +249,7 @@ export default function ViewPaymentDetails(){
                 </table>
             </form>
             </div>
-            <button onClick={handlePrint} className="print__button btn2"><FiPrinter/> Print Report </button>
+            <Link to="/printPaymentDetails"><button  className="print__button btn2"><FiPrinter/> Print Report </button></Link>
 
         </div>
     );

@@ -22,7 +22,7 @@ function ViewNavbar() {
 
                         <Link to="/add" type="radio" className="btn nav-link anime color" style={{color:"white"}} aria-current="page">Add Product</Link>
                         <Link to="/view" type="radio" className="btn nav-link anime color active" style={{color:"white"}}>Available Products</Link>
-                        
+                        <Link to="/printreport" type="radio" className="btn nav-link anime color " style={{color:"white"}} aria-current="page">Generate Report</Link>
                     </div>
                 </div>
             </div>

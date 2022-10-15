@@ -26,7 +26,7 @@ export default function AddProduct() {
     const [City , setCity] = useState('');
     const [State , setState] = useState('');
     const [Zip_Code , setZip_Code] = useState('');
-    const [Order_ID , setOrder_ID] = useState('');
+    const [Order_ID , setOrder_ID] = useState(localStorage.getItem("productID"));
     const [Totle_price , setTotle_price] = useState(localStorage.getItem("price"));
     
     //action="http://localhost:3000/Payment_Details/add_Payment" method="post"
@@ -198,7 +198,7 @@ export default function AddProduct() {
                     <div className="containers2">
                     <div className="col-md-5 element">
                         <label for="inputQuant8" className="form-label1">Order ID</label>
-                        <input name="Order_ID"  type="text" className="form-control" id="inputQuant8" placeholder="OD026" onChange={(e)=>setOrder_ID(e.target.value)}
+                        <input name="Order_ID"  type="text" value={localStorage.getItem("productID")} className="form-control" id="inputQuant8" placeholder="OD026" disabled style={{color:"black",textAlign: "center"}}
                         />
                     </div>
 

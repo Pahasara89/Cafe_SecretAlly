@@ -5,8 +5,8 @@ import './AdminCards.css'
 function AdminCards() {
   return (
     <div className='cards'>
-      <h1>Hello Admin</h1>
-      <h1>Welcome to Cafe SecretAlly Management Section</h1>
+      <h1>Welcome to Cafe SecretAlly </h1>
+      <h1>Management Section</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>
@@ -20,7 +20,7 @@ function AdminCards() {
                     src="images/delivery.gif"
                     text="Manage Delivere Details"
                     label="Delivery Management"
-                    path="/add-delivery"
+                    path="/ViewDeliveries"
                 />
 
                 
@@ -40,7 +40,7 @@ function AdminCards() {
                 <CardItem
                     src="images/payment.gif"
                     text="Details of Payment"
-                    label="User Management"
+                    label="Payment Management"
                     path="/view_Payment"
                 />
 

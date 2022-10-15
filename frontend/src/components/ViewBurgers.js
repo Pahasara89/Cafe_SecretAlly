@@ -1,8 +1,6 @@
 import React from 'react';
-import {Card} from 'react-bootstrap';
-import {useDispatch} from 'react-redux';
+import {Card, Col} from 'react-bootstrap';
 import '../App.css';
-import {Col} from 'react-bootstrap';
 
 const ViewBurgers = ({product,userInfo}) => {
     const cat = product.category;

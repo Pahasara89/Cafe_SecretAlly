@@ -1,8 +1,8 @@
 import React, {useState,useEffect,Fragment,useRef} from 'react';
-import AddPaymentDetailsNavBar from './AddPaymentDetailsNavBar';
+import PrintPaymentDetailsNavBar from './printPaymentDetailsNavBar';
 import axios from 'axios';
 import EditPayment from './EditPayment';
-import ViewPaymentTable from './ViewPaymentTable';
+import ViewPaymentTable from './PrintPaymentTable';
 import '../App.css';
 import './AddProductNavBar.css'
 import {FiPrinter} from 'react-icons/fi';
@@ -181,7 +181,7 @@ export default function ViewPaymentDetails(){
     return(
         <div >
             <AdminNavBar/>
-            <AddPaymentDetailsNavBar/>
+            <PrintPaymentDetailsNavBar/>
             
             
             <div className='search-container'>
@@ -200,7 +200,7 @@ export default function ViewPaymentDetails(){
                             <th>Order ID</th>
                             <th>Amount</th>
                             <th>Date</th>
-                            <th>Action</th>
+                            
                         </tr>
                     </thead>
 
@@ -208,17 +208,18 @@ export default function ViewPaymentDetails(){
                         {Payment_Details.filter((Payment_Details)=> {
                             if(q === ""){
                                 return Payment_Details
-                            }else if(Payment_Details.BanK_Owner_Name.toLowerCase().includes(q.toLowerCase())) {
-                                return Payment_Details
-                            }
+                            }else if(Payment_Details.BanK_Owner_Name.toLowerCase().includes(q.toLowerCase())||
+                                     Payment_Details.Pay_ID.toLowerCase().includes(q.toLowerCase()) ||
+                                     Payment_Details.Order_ID.toLowerCase().includes(q.toLowerCase())||
+                                     Payment_Details.Pay_date.toLowerCase().includes(q.toLowerCase())){
+                       return Payment_Details
+                   }
                         }).map((Payment_Details)=> (
                             <Fragment>
 
                                 {editPayment === Payment_Details._id ? (
                                     <EditPayment 
-                                        editFormData={editFormData} 
-                                        handleEditFormChange={handleEditFormChange}
-                                        handleCancelClick={handleCancelClick}
+                                       
                                     />
                                  ) :
                                 /* (
@@ -231,9 +232,7 @@ export default function ViewPaymentDetails(){
                                   (
                                     <ViewPaymentTable 
                                         Payment_Details={Payment_Details}
-                                        handleEditClick={handleEditClick}
-                                        handleViweClick={handleviweClick}
-                                        handleDeleteClick={handleDeleteClick}
+                                        
                                     />
                                  )}
                                  

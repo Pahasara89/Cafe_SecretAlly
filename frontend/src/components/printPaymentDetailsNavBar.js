@@ -13,16 +13,15 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <Link to="/admin-home" class="btn homebtn"><FaHome/><span style={{position:"relative", top:"1.5px",marginLeft:"2px"}}>Home</span></Link>
 
                 <div className="collapse navbar-collapse"></div>
 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav Navbtn">
                         
-                        <Link to="/add" className="btn nav-link anime color active" style={{color:"white"}} aria-current="page">Add Product</Link>
-                        <Link to="/view" className="btn nav-link anime color" style={{color:"white"}}>Available Products</Link>
-                        <Link to="/printreport" className="btn nav-link anime color" style={{color:"white"}} aria-current="page">Generate Report</Link>
+                        
+                        <Link to="/view_Payment" className="btn nav-link anime color active" style={{color:"white"}}aria-current="page">Back to Payment Details</Link>
+                        
                     </div>
                 </div>
             </div>

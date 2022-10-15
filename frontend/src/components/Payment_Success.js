@@ -9,11 +9,15 @@ import './Payment_Success.css'
 import HomeNavBar from "./HomeNavBar";
 import './HomeNavBar.css'
 import Footer from "./Footer";
+import axios from 'axios';
 
 
 
 
 function Payment_Success() {
+    const [Payment_Details,setPayment_Details] = useState([]);
+    const [q, setQ] = useState(localStorage.getItem("Order_ID"));
+
     const [bankOwnerName , setBankOwnerName] = useState('');
     const [Pay_date , setPay_date] = useState('');
     const [BanKName , setBanKName] = useState('');
@@ -28,6 +32,30 @@ function Payment_Success() {
     const [Expiry , setExpiry] = useState('');
 
     useEffect(() => {
+      function getPayment_Details() {
+        axios.get("http://localhost:3000/Payment_Details/view_Payment").then((res) => {
+
+            setPayment_Details(res.data);
+            console.log(res.data)
+        }).catch((err) => {
+
+            alert(err.message);
+        })
+    }
+
+    getPayment_Details();
+
+    // if(Payment_Details.Order_ID===q){
+      
+    //   localStorage.setItem("Pay_ID", Payment_Details.Pay_ID);
+
+    // }
+
+    
+
+
+
+
         setBankOwnerName(localStorage.getItem("bankOwner"));
         setPay_date(localStorage.getItem("Pay_date"));
         setBanKName(localStorage.getItem("BanKName"));
@@ -62,6 +90,7 @@ function Payment_Success() {
 
         window.location.href = "/customer-home"
       }
+      
 
   return (
     // <div>
@@ -74,6 +103,13 @@ function Payment_Success() {
     // </div>
     <>
     <div >
+                       {Payment_Details.filter((Payment_Details)=> {
+                            if(q === ""){
+                                return Payment_Details
+                            }else if(Payment_Details.Order_ID.toLowerCase().includes(q.toLowerCase())){
+                              localStorage.setItem("Pay_ID", Payment_Details.Pay_ID);
+                            }
+                        })} 
       
       <HomeNavBar/>
             
@@ -85,7 +121,11 @@ function Payment_Success() {
                   <div className="containers5">
                   
                       <h1>Purchase Details</h1>
-                      <p className='Receipt3'>Payment ID</p>
+                      <p className='Receipt3'>Payment ID :</p>
+                      <p className='Receipt2'>{localStorage.getItem("Pay_ID")}</p>
+
+                      <p className='Receipt3'>Order ID :</p>
+                      <p className='Receipt2'>{Order_ID}</p>
 
                       <p className='Receipt3'>Name :</p>
                       <p className='Receipt2'>{bankOwnerName}</p>

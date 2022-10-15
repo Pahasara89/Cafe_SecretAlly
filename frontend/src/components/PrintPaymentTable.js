@@ -3,13 +3,9 @@ import './DownloadInvoice.css'
 
 
 
-const PrintPaymentTable = ({Payment_Details , handleEditClick, handleDeleteClick }) => {
+const PrintPaymentTable = ({Payment_Details }) => {
     
-    const handleviweClick = (id) =>{
 
-        window.location.href=`view_Payment_Details/${id}`
-
-    }
     
     
     return(
@@ -29,11 +25,7 @@ const PrintPaymentTable = ({Payment_Details , handleEditClick, handleDeleteClick
 
                 
             
-                <td>
-                    <button type="button" onClick={(e) => handleEditClick(e,Payment_Details)}className="btn btn-outline-success">Edit</button>
-                    <button type="button" onClick={()=>{handleviweClick(Payment_Details._id)}} className="btn btn-outline-warning">View</button>
-                    <button type="button" onClick={() => handleDeleteClick(Payment_Details._id)}className="btn btn-outline-danger">Delete</button>
-                </td>
+                
             </tr>
             
             

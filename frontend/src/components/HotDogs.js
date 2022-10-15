@@ -3,15 +3,12 @@ import axios from 'axios';
 import ViewHotDogs from './ViewHotDogs';
 import HomeNavBar from './HomeNavBar';
 import {Row,Container} from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+
 
 
 export default function HotDogs() {
 
     const [products,setProducts] = useState([]);
-
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
 
     useEffect(() =>{
 
@@ -37,7 +34,7 @@ export default function HotDogs() {
            <Row>
               {products.map((product)=> {
                   return(
-                    <ViewHotDogs product={product} userInfo={userInfo}/>
+                    <ViewHotDogs product={product} />
                   )
               })}
            </Row>
