@@ -64,7 +64,7 @@ export default function AllUser(){
             <center><h2>Details of Users</h2></center>
 
             <div id="repGSearch" className='col-lg-3 mt-2 mb-2 ml-5'>
-                <input type="search" className="form-control" placeholder="Search Users..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
+                <input type="search" className="form-control" placeholder="Search Users" value={q} onChange={(e)=> setQ(e.target.value)}/>      
             </div>
             
             
