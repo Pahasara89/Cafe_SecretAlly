@@ -17,8 +17,10 @@ import UserProfile from "./components/Auth/UserProfile";
 import Cart from "./components/Cart/Cart";
 import UserContext from './components/Auth/context/userContext';
 import AllUser from './components/AllUsers';
+import GenerateReport from './components/GenerateReport';
 
 import ContactUs from './components/ContactUs';
+import AddPaymentDetails from './components/AddPaymentDetails';
 
 const App = () =>{
 
@@ -69,11 +71,14 @@ const App = () =>{
             <Route path="/add" element={<AddProduct/>} />
             <Route path="/register" element={<Register/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/AddPaymentDetails" element={<AddPaymentDetails/>}/>
+            
             
             <Route path="/profile" element ={<UserProfile />} />
             <Route path="/cart" element ={<Cart/>} />
             <Route path="/contact" element={<ContactUs/>}/>
             <Route path="/allu" element={<AllUser/>}/>
+            <Route path='/GenerateReport' element={<GenerateReport/>}/>
             </Routes>
           </UserContext.Provider>
 

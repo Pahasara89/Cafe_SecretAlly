@@ -91,7 +91,7 @@ function Register () {
                     <button type="submit" value="Register" className="btn btn-primary">Register</button>
                 </div>
                     <div style={{marginLeft:900,marginTop:10,fontSize:14}}>
-                        <p>Have a account already ?<Link to="/login" class="nav-link">Sign In Now</Link></p>
+                        <p>Alredy have an account?<Link to="/login" class="nav-link">Sign In Now</Link></p>
                     </div>
                 </form>
             </div>

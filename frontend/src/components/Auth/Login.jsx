@@ -56,8 +56,8 @@ function Login () {
                     <label>Password: </label>
                     <input type="password" className="form-control" id="password" onChange={e => setPassword(e.target.value)}/>
                 </div>
-                <div style={{marginLeft:800,fontSize:14}}>
-                    <p>Not Register Yet ?<Link to="/register" class="nav-link">Register Now</Link></p>
+                <div style={{marginLeft:900,marginTop:10,fontSize:14}}>
+                        <p>Not Register Yet?<Link to="/register" class="nav-link">Register Now</Link></p>
                 </div>
                 <div className="d-grid" style={{marginLeft:500, marginRight:500}}>
                     <button type="submit" value="Login" className="btn btn-primary">LOGIN</button>

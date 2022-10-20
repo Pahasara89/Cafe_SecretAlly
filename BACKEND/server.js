@@ -9,7 +9,7 @@ const connectDB = require("./config/db");
 const productRouter = require("./routes/products.js");
 const userRoute=require("./routes/user.route");
 const cartRoute=require("./routes/cart.route");
-
+const paymentRoute=require("./routes/Payment_Details")
 
 const app  =express();
 dotenv.config();
@@ -29,6 +29,8 @@ app.use('/product',productRouter);
 app.use("/user",userRoute);
 
 app.use("/cart",cartRoute);
+
+app.use("/Payment_Details",paymentRoute);
 
 const PORT=process.env.PORT  || 5000;
 

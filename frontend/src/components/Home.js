@@ -6,6 +6,8 @@ import Header from './Header/Header';
 
 
 export default function home(){
+
+    
     return(
         <div className='back'>
             <HomeNavBar/>

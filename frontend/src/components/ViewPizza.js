@@ -5,15 +5,18 @@ import '../App.css';
 const ViewPizza = ({product,userInfo}) => {
     const cat = product.category;
 
-    const addtocard= (price,productName,productID)=>{
+    const addtocard= (price,productName,productID,quantity)=>{
 
         localStorage.setItem("price", price);
 
         localStorage.setItem("productName", productName);
 
         localStorage.setItem("productID", productID);
+        localStorage.setItem("discount", "20");
+        localStorage.setItem("quantity", quantity);
 
-        window.location.href = "/cart"
+        window.location.href = "/AddPaymentDetails"
+       
 
     }
  
@@ -35,7 +38,7 @@ const ViewPizza = ({product,userInfo}) => {
                                 type='button' 
                                 className='btn btn-warning btn-sm'
                                 disabled={product.quantity <= 0}
-                                onClick={()=>addtocard(product.price,product.productName,product.productID)}
+                                onClick={()=>addtocard(product.price,product.productName,product.productID,product.quantity)}
                                 >
                                     Add to Cart
                             </button>

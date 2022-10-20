@@ -1,6 +1,10 @@
+const router = require("express").Router();
+const multer = require('multer');
+const path = require('path');
+const alert = require('alert');
+const Mongoose = require('mongoose');
 const express = require('express');
-//const { default: Product } = require('../../src/components/Product');
-const router = express.Router();
+//const { default: Product } = reqconst router = express.Router();
 const {Cart} = require("../models/Cart");
 
 //get method to fetch data from products
@@ -16,15 +20,57 @@ const {Cart} = require("../models/Cart");
 // });
 
 //post method to save data in cart
-router.post("/insertCart", (req, res) => {
+router.post("/insertCart", async (req, res) => {
 
   //save data got from the client into the carts collection in the DB
-  const cart = new Cart(req.body)
+ 
+  const newCart = new Cart({
 
-      cart.save((err) => {
-          if(err) return res.status(400).json({ success: false, err})
-          return res.status(200).json({ success: true})
-      })
+    userId: req.body.userId,
+
+    productName: req.body.productName,
+    price: req.body.price,
+
+    product_id: req.body.product_id,
+    discount: req.body.discount,
+    quantity: req.body.quantity,
+    
+    
+})
+
+// const totalNumberOfuserInDb = await Cart.countDocuments()
+
+// convert number to string, so we can concatenate 0s easily...
+
+    // let numberToString = totalNumberOfuserInDb.toString()
+
+
+
+    // // If length of number string is less than 5 then add leading 0s in nuberToString
+
+    // if(numberToString.length < 5){
+
+    //     for (let i = numberToString.length; i < 5; i++){
+
+    //         numberToString = '0' + numberToString
+
+    //     }
+
+    
+
+    //newCart.userId = ORD$`{numberToString}`
+
+    newCart.save().then(()=>{
+    alert('Payment successfully');
+    //res.redirect('http://localhost:3000/add_Payment');
+    return res.status(200).json({msg:"success"})
+
+}).catch((err)=>{
+    alert('Failed');
+    //res.redirect('http://localhost:3000/add_Payment');
+    return res.status(400).json({msg:"error"})
+    console.log(err);
+})
 });
 
 
@@ -74,6 +120,14 @@ router.get('/edit/:userId', function (req, res) {
       });
     }
   });
+  });
+
+  router.route("/all").get((req,res)=>{
+    User.find().then((users)=>{
+        res.json(users)
+    }).catch((err)=>{
+        console.log(err)
+    })
   });
 
 

@@ -4,9 +4,11 @@ import './Header/Header.css';
 import {Link} from 'react-router-dom';
 import {AiOutlineDingding} from 'react-icons/ai';
 import {useSelector,useDispatch} from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { logout } from "../actions/userAction";
+import axios from 'axios';
 import {
     Container,
     Form,
@@ -52,6 +54,21 @@ function HomeNavBar () {
       setLength();
 
     }, [userInfo]);
+    const history = useNavigate();
+    useEffect(() => {
+        const token = localStorage.getItem("auth-token");
+        axios.get("http://localhost:3000/user/",{headers :{'x-auth-token':`${token}`}}).then(res =>{
+            console.log(res.data);
+            //setUserDetails(res.data);
+        })
+        // .then(jsonres => setUserDetails(jsonres));
+    },[]);
+    function logOut(){
+      localStorage.setItem("auth-token","");
+      localStorage.setItem("userId","");
+
+      history("/login");
+  }
   
 
     return(
@@ -142,6 +159,9 @@ function HomeNavBar () {
                   <Link to='/contact' className='homenav-links'>
                           Contact Us
                   </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <input type="button" onClick={()=>logOut()} value="Logout" className="btn btn-warning"></input>
                 </Nav.Link>
   
                 

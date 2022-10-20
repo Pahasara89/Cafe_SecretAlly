@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import HomeNavBar from '../HomeNavBar';
+import Swal from 'sweetalert2';
 
 function UserProfile() {
     const [userDetails, setUserDetails] = useState({
@@ -22,13 +23,33 @@ function UserProfile() {
         // .then(jsonres => setUserDetails(jsonres));
     },[]);
 
-    function DeleteUser(){
-        const token = localStorage.getItem("auth-token");
-        axios.delete("http://localhost:3000/user/delete",{headers :{'x-auth-token':`${token}`}}).then(res =>{
-            console.log(res.data);
-            console.log("User Deleted Successfully!")
-        })
-    }
+    function deleteUsers(id){
+        Swal.fire({
+            title: 'Are You Sure?',
+            text: 'Once deleted, You will not able to recover these details !',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#30085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Delete'
+
+        }).then((res)=>{
+            if(res.isConfirmed)
+            {axios.delete(`http://localhost:5000/user/delete/${id}`);
+            Swal.fire({
+                title: 'Success!',
+                text: 'Delete user Successfully',
+                icon: 'success',
+                showConfirmButton: false,
+                
+        });}
+    }).catch((err)=>{
+        Swal.fire({
+            title: 'Error!',
+            text: "Couldn't delete user",
+            icon: 'error',
+    });
+    });}
     
     function logOut(){
         localStorage.setItem("auth-token","");
@@ -79,7 +100,7 @@ function UserProfile() {
                             </div>
                         </form>
                         <div className="d-grid">
-                            <input type="button" value="Delete" onClick={() => DeleteUser()} className="btn btn-danger"/>
+                            <input type="button" value="Delete" onClick={()=>deleteUsers(userDetails._id)} className="btn btn-danger"/>
                         </div>
                         <div className="d-grid">
                             <input type="button" style={{marginTop:20}} value="Logout" onClick={() => logOut()} className="btn btn-warning"/>
@@ -90,5 +111,4 @@ function UserProfile() {
         </div>
     )
 }
- 
 export default UserProfile;

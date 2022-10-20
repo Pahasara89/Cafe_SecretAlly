@@ -102,6 +102,7 @@ function Cart() {
                         <th>Remove item</th>
                     </tr>
                 </thead>
+                
                 {cartItems.map(Cart =>    
                     <tr>
                         <td >{Cart.productName}</td>
