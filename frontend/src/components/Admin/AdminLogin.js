@@ -2,11 +2,11 @@ import React,{useState} from "react"
 //import '../App.css'
 import axios from "axios"
 import Swal from "sweetalert2";
-import './UserLogin.css'
+import './UserRegister.css'
 import {Link} from "react-router-dom";
 
 
-export default function UserLogin(){
+export default function AdminLogin(){
 
     const [data, setData] = useState({
         email: "",
@@ -49,7 +49,7 @@ export default function UserLogin(){
             <form onSubmit={sendData}>
                 <div style={{marginLeft:540}}>
                 </div>
-                <h3 className="text-center">Login</h3>
+                <h3 className="text-center">Admin Login</h3>
                 <div className="mb-3" style={{marginLeft:400, marginRight:400}}>
                     <label>Email: </label>
                     <input type="email" name="email" className="form-control" id="email" value={data.email} onChange={handleChange}/>

@@ -2,12 +2,12 @@ import React,{useState} from "react"
 //import '../App.css'
 import axios from "axios"
 import Swal from "sweetalert2";
-import './UserRegister.css'
+import './UserLogin.css'
 import {Link} from "react-router-dom";
 
 
 
-export default function UserRegistration(){
+export default function AdminRegistration(){
 
     const [data, setData] = useState({
         firstName: "",
@@ -34,7 +34,7 @@ export default function UserRegistration(){
                 showConfirmButton: false,
             })
             setTimeout(() => {
-                window.location = "/UserLogin"
+                window.location = "/AdminLogin"
             }, 2000)
         }
         catch (error) {
@@ -48,7 +48,7 @@ export default function UserRegistration(){
             <div className="containers99">
             {/* {error && <ErrorNotice message={error} clearError={() => setError(undefined)} />} */}
                 <form className='was-validated'onSubmit={sendData}>
-                    <h3 className="text-center">Registration</h3>
+                    <h3 className="text-center">Admin Registration</h3>
                     <div className="col-md-7 element">
                         <label>First Name :</label>
                         <input type="text" name="firstName" className="form-control" id="firstName" value={data.firstName} onChange={handleChange}/>

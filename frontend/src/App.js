@@ -36,6 +36,8 @@ import PrintPaymentDetail from './components/printPaymentDetails';
 import LoadingPage from './components/LoadingPage';
 import UserRegistration from './components/User/UserRegistration';
 import UserLogin from './components/User/UserLogin';
+import AdminLogin from './components/Admin/AdminLogin';
+import AdminRegistration from './components/Admin/AdminRegistration';
 
 
 
@@ -68,8 +70,8 @@ import ViewAdmin from './components/ViewAdmin';
             <Route path="/shawarma" element={<Shawarma/>} />
             <Route path="/hotdogs" element={<HotDogs/>} />
             <Route path="/add" element={<AddProduct/>} />
-            <Route path = "view-admin" element={<ViewAdmin/>}/>
-            <Route path="printreport" element={<PrintReport/>}/>
+            <Route path = "/view-admin" element={<ViewAdmin/>}/>
+            <Route path="/printreport" element={<PrintReport/>}/>
 
           
             <Route path="/contact" element={<ContactUs/>}/>
@@ -96,6 +98,9 @@ import ViewAdmin from './components/ViewAdmin';
             <Route path="/LoadingPage" element={<LoadingPage/>}/>
             <Route path="/UserRegistration" element={<UserRegistration/>}/>
             <Route path="/UserLogin" element={<UserLogin/>}/>
+
+            <Route path="/AdminRegistration" element={<AdminRegistration/>}/>
+            <Route path="/AdminLogin" element={<AdminLogin/>}/>
             
 
 

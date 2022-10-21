@@ -15,6 +15,9 @@ const CustomerRouter = require("./routes/Customer.js");
 const userRegistrationRouter = require("./routes/userRegistration");
 const userLoginRouter = require("./routes/userLogin");
 
+const adminRegistrationRouter = require("./routes/adminRegistration");
+const adminLoginRouter = require("./routes/adminLogin");
+
 
 
 
@@ -42,6 +45,9 @@ app.use('/Customer',CustomerRouter);
 
 app.use("/user",userRegistrationRouter);
 app.use("/user/login",userLoginRouter);
+
+app.use("/admin",adminRegistrationRouter);
+app.use("/admin/login",adminLoginRouter);
 
 
 
